@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(45deg, rgba(255, 0, 150, 0.7), rgba(0, 150, 255, 0.7));
+    animation: movingGradient 6s infinite linear;
+    background-size: 300% 300%;
+}
+.image-gallery{
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 30px;
+}
+.image-gallery img{
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border-radius: 10px;
+    height: 100%;
+}
+/* .image-gallery img:hover{
+    transform: scale(0.7) rotate(-15deg);
+    border-radius: 30px;
+    height: 93%;
+} */
+.full-image{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.full-image img{
+    width: 50%;
+    height: 80vh;
+    border-radius: 25px;
+    object-fit: cover;
+}
+.full-image span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+.full-image span i{
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+#leftKey{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    padding: 1.2vh;
+    border-radius: 50%;
+    background-color: orange;
+    cursor: pointer;
+
+}
+#leftKey i{
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+}
+#rightKey{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    padding: 1.2vh;
+    border-radius: 50%;
+    background-color: orange;
+    cursor: pointer;
+
+}
+#rightKey i{
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+}
+@keyframes movingGradient {
+    0%{
+        background-position: top right;
+    }
+    50%{
+        background-position: center;
+    }
+    100%{
+        background-position: bottom left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************** */
+
+.overflow-hidden {
+    overflow: hidden;
+}
+.overflow-hidden:hover {
+    box-shadow: 1px 1px 15px 0 #00000061;
+    border-radius: 7px;
+}
+.overflow-hidden:hover img {
+    transform: scale(1.2);
+}

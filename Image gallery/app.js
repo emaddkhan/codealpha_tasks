@@ -8,10 +8,83 @@ const imageGallery = document.querySelector('.image-gallery')
 const dotContainer = document.getElementById('dotsContainer')
 const introScreen = document.getElementById('introScreen')
 
+let touchStartX = 0;
+let touchEndX = 0;
+fullimageBox.addEventListener("touchstart", (event) => {
+    touchStartX = event.touches[0].clientX;
+});
+fullimageBox.addEventListener("touchmove", (event) => {
+    touchEndX = event.touches[0].clientX;
+});
+fullimageBox.addEventListener("touchend", () => {
+    let swipeDistance = touchStartX - touchEndX;
+
+    if (swipeDistance > 50) {
+        showNextImage();
+    } else if (swipeDistance < -50) {
+        showPreviousImage();
+    }
+});
+
+setTimeout(()=>{
+    introScreen.style.opacity='0.9';
+},1900)
+setTimeout(()=>{
+    introScreen.style.opacity='0.85';
+},1950)
+setTimeout(()=>{
+    introScreen.style.opacity='0.8';
+},2000)
+setTimeout(()=>{
+    introScreen.style.opacity='0.75';
+},2050)
+setTimeout(()=>{
+    introScreen.style.opacity='0.7';
+},2100)
+setTimeout(()=>{
+    introScreen.style.opacity='0.65';
+},2150)
+setTimeout(()=>{
+    introScreen.style.opacity='0.6';
+},2200)
+setTimeout(()=>{
+    introScreen.style.opacity='0.55';
+},2250)
+setTimeout(()=>{
+    introScreen.style.opacity='0.5';
+},2300)
+setTimeout(()=>{
+    introScreen.style.opacity='0.45';
+},2350)
+setTimeout(()=>{
+    introScreen.style.opacity='0.4';
+},2400)
+setTimeout(()=>{
+    introScreen.style.opacity='0.35';
+},2450)
+setTimeout(()=>{
+    introScreen.style.opacity='0.3';
+},2500)
+setTimeout(()=>{
+    introScreen.style.opacity='0.25';
+},2550)
+setTimeout(()=>{
+    introScreen.style.opacity='0.2';
+},2600)
+setTimeout(()=>{
+    introScreen.style.opacity='0.15';
+},2650)
+setTimeout(()=>{
+    introScreen.style.opacity='0.1';
+},2700)
+setTimeout(()=>{
+    introScreen.style.opacity='0.05';
+},2750)
 setTimeout(()=>{
     introScreen.style.opacity='0';
-    introScreen.style.visibility='hidden'
-},3000)
+    introScreen.style.display='none'
+},2800)
+
 
 fileInput.addEventListener('change',function(event){
     const file = event.target.files[0];

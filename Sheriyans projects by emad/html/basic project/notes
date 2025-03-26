@@ -1,0 +1,11 @@
+<b>Hello this is a bold tag</b>
+    <i>Hello this is a italic tag</i>
+    <sup>heloo  this is a superscript tag</sup>
+    <sub>hello  this is a subscript tag</sub>
+    <ol>it is a order list it will gives you a list with numbers</ol>
+    <ul>this is under list this will gives you list with bullets</ul>
+    <li>this is a list item</li>
+    <a href="">it is a anchor tag it will connet to you any link thriugh href attribute</a>
+    if you will use target="_blank" as a attribute in <a></a> the link will open on another tab
+    pseudo elements  are used to add some style to your element like ::before and ::after
+    pseudo classes are  used to add some style to your element when it is in a certain state like :hover and :focus

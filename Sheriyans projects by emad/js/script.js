@@ -12,3 +12,205 @@
 //windows
 // js kuch function jo brrowsers se borrow krta hai woh functions windows kehlate hain by default woh js language ka hiss nhi hote for example
 // alert, console, prompt etc
+
+
+// DATA TYPES
+
+// primitive and refernce datatypes
+
+
+// primitive datatypes are 12 , 12.3 , null, undefined, true ,false
+//reference datatypes are [],{},() for example 
+// var a = ( );
+// var b=[];
+// var c={};
+// var d=function(){};
+
+// primitive actual me values ko copy krdeta hai matlab kai
+// let a =12;
+// let b=a+2;
+// so the answere will be 14;
+// on other side refernece does not copy the values it only act on the first values
+// var arr = [1,2,3,4,5]
+// var b = arr;
+// agr me b ki value me se last value htao toh woh arr ki value me se bhi last value hta dega ye hoti reference types
+// b.pop();
+// toh b ka answere ho ga [1,2,3,4]
+// pr ab arr ka bhi answere [1,2,3,4] hi hoga
+// or jo pop() hai woh array ki last valye hatane k liye use hota hai 
+// agr hume refernce type ko actuall me copy krna hai toh hame spread operator use krna hoga
+// matlab k 
+// var arr = [1,2,3,4,5]
+// var b =[...arr] in teen dots ka matlab hai jo value ... k bad likhi hai uski sari values copy krk isme le aao
+
+
+
+// conditionals = if else ,else-if, ternary operators , switch operators
+// agr app ko koi decision lena hai ho k aage ka execution kesa hoga toh waha pr if else use hota hai
+//if me ya toh true hoga ya false 
+//truthy anf falsy value
+//har value ko true ya false bnaya ja skta hai ,ye depend krta hai k agr woh value truthy hai toh woh true bnegi ,or agr woh falsy hai toh false bnegi
+
+//falsy values are    null,undefined,"",'',0,document.all,NaN
+//baqi sari values truthy
+
+
+// loops = repeat
+//types of loops are
+//for while do-while foreach forin forof
+// for(start;end;change){
+
+// }
+//agr mujy 5 panch bar lop chalana hai toh woh ese hoga k num ki value me dedoon ga 17 toh or me boloon ga ki jab is ki last value 22 hogai toh loop end hojaye
+//or isme num++ ka matlab hai k value me +1 hoga
+//questions
+//1)num ki akhri value kia hoi
+// answere:17
+//2) num ki akhri value jiskliye loop chala ho
+//answere:16
+// for(var num=17 ;num>22 ;num++){
+
+// }
+
+// //1 - 10
+// for(var i=1;i<11; i++){
+
+// }
+// //20 - 50
+// for(var i=20; i<51; i++){
+    
+// }
+// //20 - 45
+// for(var i=20; i<46; i++){
+    
+// }
+// //20 - 5
+// for(var i=20; i>4; 1--){
+    
+// }
+// //5 - 1
+// for(var i = 5; i>0; i--){
+    
+// }
+
+//WHILE loop
+// start;
+// while(end){
+//     change
+// }
+//1-10
+// var i = 1;
+// while(i<11){
+//    i++
+// }
+// //20-45
+// var i = 20
+// while(i<46){
+//     i++
+// }
+// //45-55
+// var i = 45
+// while(i<56){
+//     i++
+// }
+// //55-45
+// var i = 55;
+// while(i>44){
+//     i--
+// }
+// //20-1
+// var i = 20;
+// while(i>0){
+//     i--
+// }
+
+//foreach loop
+//foreach ek normal loop nhi hai hai for ya ehile ki tarah jo numnbers pr chalta ho yani start or end pr chaly,for each loop sirf array pe chalta hai
+
+
+//FUNCTION
+// javscripts has two types es5 and es6
+//es5 has three types of function which are
+//1)function statments, 2)funtion expression ,3)annonymous function
+//es6 has one type of function which is    fat arrow function and it has three types
+//a)basic fat arrow
+//b)fat arrow with one param
+//c)fat arrow with implicit return
+
+// js me function normal programing jese nhi hote hain iska matlab js me function bnane k liye type nhi btana padta bss apko function word likhna padega
+// and function ko koi naam deke bna skte ho
+//indepth - Js me functions ko first class function ka darja diya gya hai, jiska matlab hai,ki js me functions ko value/variable ki tarah treat 
+// kiya ja skta hai
+
+//question
+//what is fuuncton
+//koi esa code jo apko bar bar use krna ho or aesa code jo usi waqt nah chalan ho pr baad me chalan ho usse functions me daal skte hain
+//for example
+// function abcd(){
+//     console.log("hello")
+// }
+// abcd()
+// why we need function
+// to reuse or code the code which we need to use in future at some points
+//how to use
+//function abcd(){  your code }
+//extras we should know
+//parameters and arguments
+// while making the function the pass in the brackets is called param
+function abcd(){
+
+}
+abcd(12);
+//while running the function the value in bracket is argument 
+// for example
+// function absd(param){
+
+// }
+// absd(argument)
+// and if you give any value in argument it will accept in param
+
+
+//prep for interview
+
+function abcd(){
+    //statement function
+}
+
+var efg = function(){
+    //function expression
+}
+
+function(){
+    //annoymous function
+}
+
+//fat arrow
+var hijk = ()=>{
+
+}
+
+// fat arrow with single parameter
+// in single parameter app iska fat() hata sakte ho
+var jo = a =>{
+
+}
+jo(12);
+
+
+
+//return - ka matlab hua jahan pe bhi return agega uske age jo bhi lekhoge woh jayega jahan pr function call hua tha ,return functions k ander lgta hai
+// jab bhi fuction kuch bhi return nhi kta woh undefined return krta hai
+function abcd(){
+    return 12;
+}
+abcd()
+
+
+//fat arrow with implicit return
+var abcd = ()=>"emad"
+
+//fat arrow
+var a=()=>{
+    return 12
+}
+a();

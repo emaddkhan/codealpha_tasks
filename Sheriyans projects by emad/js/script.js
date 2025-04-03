@@ -214,3 +214,68 @@ var a=()=>{
     return 12
 }
 a();
+
+
+//undefined is a value
+// ye value tab di jati hai jab variable ko koi value na di gai ho, iska matlab hai,hai k yeh aik garbaje value ki tarah treat ki jati hai,app ise default
+//vale bhi keh skte ho
+//not defined is an error
+//koi particuler variable/element ko use krna withouts its declaration that's give an error
+//null is an value
+//this is also a vvalue which resolve like,not found
+//null is recive when something is not found
+
+
+//ARRAYS
+
+//what
+//jab bhi apko ek ya ekse zyada values aik sath save krni ho
+//EXAMPLE
+//simple method
+// var user1 = "asd",
+// var user2 = "sdf",
+// var user3 = "dfg",
+// var user4 = "fgh",
+// var user5 = "ghj",
+// //ARRAY METHOD
+// var user =["asd","sdf",'dfg',"fgh",'ghj']
+// console.log[user(0)]
+// the answere will be "asd"
+//in array counting starts from 0
+//how
+// var arr = [1,2,function(){},[],"jbhsd"]
+//why
+//lot of data have more then one value to keep data altoghether we use array
+
+//LOOP WITH ARRAY
+// var arr = [1,2,3,4,5];
+//how to loop an array
+// arr.forEach(function(elem){
+//     console.log("emad")
+// })
+//how to loop an array and do something with eacch element
+// arr.forEach(function(val){
+//     console.log(val+1)
+// })
+
+
+//OBJECTS
+//what
+//object ek tareeka jisse se hum aik identity ki details ko ek sath rakh sakte hain
+//kahin logo ka data = array
+//aik bnde ka kahin sara data = object
+//how
+// var obj ={};
+// var obj2 = new Object();
+//when and why
+// var obj = {
+//     name:"emad",
+//     age:18,
+//     email:"kuch@kuch.com",
+//     contact:03097444454
+// };
+//how to access obj element
+//i want to access age element in obj
+// obj.age
+//SYNCHRONOUS me code line by line chalta hai
+//ASYNCHRONOUS me code line by line nhi chalta sara async code aik sath shuru krdia jata hai jo pehle complete ho jaye uska answere complete krdia jata hai

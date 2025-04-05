@@ -157,63 +157,63 @@
 //extras we should know
 //parameters and arguments
 // while making the function the pass in the brackets is called param
-function abcd(){
-
-}
-abcd(12);
-//while running the function the value in bracket is argument 
-// for example
-// function absd(param){
+// function abcd(){
 
 // }
-// absd(argument)
-// and if you give any value in argument it will accept in param
+// abcd(12);
+// //while running the function the value in bracket is argument 
+// // for example
+// // function absd(param){
+
+// // }
+// // absd(argument)
+// // and if you give any value in argument it will accept in param
 
 
-//prep for interview
+// //prep for interview
 
-function abcd(){
-    //statement function
-}
+// function abcd(){
+//     //statement function
+// }
 
-var efg = function(){
-    //function expression
-}
+// var efg = function(){
+//     //function expression
+// }
 
-function(){
-    //annoymous function
-}
+// function(){
+//     //annoymous function
+// }
 
-//fat arrow
-var hijk = ()=>{
+// //fat arrow
+// var hijk = ()=>{
 
-}
+// }
 
-// fat arrow with single parameter
-// in single parameter app iska fat() hata sakte ho
-var jo = a =>{
+// // fat arrow with single parameter
+// // in single parameter app iska fat() hata sakte ho
+// var jo = a =>{
 
-}
-jo(12);
-
-
-
-//return - ka matlab hua jahan pe bhi return agega uske age jo bhi lekhoge woh jayega jahan pr function call hua tha ,return functions k ander lgta hai
-// jab bhi fuction kuch bhi return nhi kta woh undefined return krta hai
-function abcd(){
-    return 12;
-}
-abcd()
+// }
+// jo(12);
 
 
-//fat arrow with implicit return
-var abcd = ()=>"emad"
 
-//fat arrow
-var a=()=>{
-    return 12
-}
-a();
+// //return - ka matlab hua jahan pe bhi return agega uske age jo bhi lekhoge woh jayega jahan pr function call hua tha ,return functions k ander lgta hai
+// // jab bhi fuction kuch bhi return nhi kta woh undefined return krta hai
+// function abcd(){
+//     return 12;
+// }
+// abcd()
+
+
+// //fat arrow with implicit return
+// var abcd = ()=>"emad"
+
+// //fat arrow
+// var a=()=>{
+//     return 12
+// }
+// a();
 
 
 //undefined is a value
@@ -279,3 +279,49 @@ a();
 // obj.age
 //SYNCHRONOUS me code line by line chalta hai
 //ASYNCHRONOUS me code line by line nhi chalta sara async code aik sath shuru krdia jata hai jo pehle complete ho jaye uska answere complete krdia jata hai
+
+
+
+
+
+
+
+
+//ADVANCE JAVASCRIPT CONCEPTS
+//this call apply blind
+//this keyword JS me one of the most suspensfull keyword hai
+//keyword ka matlab hota hai esa waord jiska koi matlab ho programming language me
+//for example
+// for , var , if are keyword
+//and chacha,asd,kjfd are not keywords
+
+//this ki value bar bar badal skti hai alag conditions me,sari conditions ko seekh jao toh this ko samajh jaoge
+
+//this
+
+//global -window
+console.log(this)
+//function -window
+function abcd (){
+    console.log(this)
+}
+//method -object
+var obj = {
+    name :function(){
+        console.log(this)
+    }
+}
+obj.name()
+//function inside method (es5) -window
+var obj2 = {
+    sayName:function(){
+        function childFunction(){
+            console.log(this)
+        }
+        childFunction()
+    }
+}
+obj2.sayName()
+//function inside method (es6) -object
+//constructer function me this ki value -new blank object
+//event listner me this ki value -that element jispr event listener lga hua ho

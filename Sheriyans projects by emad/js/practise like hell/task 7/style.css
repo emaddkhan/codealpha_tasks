@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100vh;
+}
+body{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#download{
+    height: 10px;
+    width: 300px;
+    border-radius: 100px;
+    background-color: #dadada;
+    overflow: hidden;
+}
+#progressBar{
+    width: 0%;
+    transition: all cubic-bezier(0.39, 0.575, 0.565, 1) ;
+    background-color: rgb(79, 226, 79);
+    height: 100%;
+}

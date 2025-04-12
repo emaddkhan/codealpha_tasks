@@ -68,6 +68,38 @@
   //     var response= res.data.results[0];
   //     console.log(response?.gender,response?.location)})
 //promise-iske ander jo code likhoge woh apna kaam krega or woh khud sidestack me chale jayenge us code ko lekr or jb ander se code resolved hojayega 
+
+     //PROMISE
+     //promise kya hai?
+
+       //kuch code socho dil me jo k asyn ho yani side stack me jayega or baad me chalega main stack me,ab ye socho k appne ne is code ko likha hai 
+       //ab is ka answer kabhi ayega or kabhi nhi toh promise kya hai aap aesa samjho aap promisee k ander koi bhi aesa code likh do jo bhi dil me aye
+       //toh promise apko aik parchi deta hai jis pr by default waiting likha hota hai, parchi pr do events hote hain mainly aik ka naam hota hai then 
+       //or dusre ka naam hota hai catch, or agr aapka data aagya toh resolved likha jayega waiting parchi pr ki jaga or then chalega,
+       //or agr apka data nah aya toh rejected likha jayega waiting ki jaga parchi pr catch chalyga  
+    //  const parchi=new Promise(function(resolve,reject){
+    //   axios.get(`https://randomuser.me/api/`)
+    //   .then(result=>{
+    //     const gen =result.data.results[0].gender;
+    //     if(gen==="male"){
+    //       resolve();
+    //     }else{
+
+    //       reject();
+    //     }
+    //   })
+    // })
+    // parchi
+    // .then(function(){
+    //   console.log("male")
+    // })
+    // .catch(function(){
+    //   console.log("female")
+    // })
 // tb ye chalega
 //actually you are writing asynchronus code.. 
 // ye sb hi use hi tb kia jate hain jb apko aisa code likhna ho jisme kuch time lgta hai
+
+
+                                               //--------------CALLBACKS---------------------*
+//callback kuch khas nhi sirf aik function hota hai bss thoda special ye hai k isse paas kia jata hai as an argument jb koi particuler async code chl jaye

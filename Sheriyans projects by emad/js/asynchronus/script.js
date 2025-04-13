@@ -131,9 +131,53 @@
 //with asyn/await app async code bhi aise likh skte ho jese aap normal sync code likh rhe ho
 //await --- means---agli line tb tk nah chalao jb tk is ka answere nah mil jae lekin await ki aik requirement hai apko await k parent function pr await 
 //lagana hoga
-async function abcd() {
-  let a = await fetch(`https://randomuser.me/api/`);
-  a=await a.json()
-  console.log(a)
+// async function abcd() {
+//   let a = await fetch(`https://randomuser.me/api/`);
+//   a=await a.json()
+//   console.log(a)
+// }
+// abcd()
+
+//----------------------------------------------------*-EVENT LOOP-*-------------------------------------------------
+//event loop bar bar check krta hai k kahin main stack khali hai k nhi jb main stack khali ho jata hai to woh callback queue ki chizon ko main stack 
+//me lata hai
+
+//-------------------------------------*-CALLBACKS vs PROMISES vs ASYNC/AWAIT-*--------------------------------------
+//QUESTION--aik url se data lekr aao or usse console me print kro
+//----by callback----
+// function dataFetcher (url,callback){
+//   axios.get(url)
+//   .then(res=>{
+//     callback(res)
+//   })
+// }
+// dataFetcher(`https://randomuser.me/api/`,function(res){
+//   console.log(res)
+// })
+
+//----by promises----
+// function dataFetcher(url){
+//   const parchi = new Promise(function(resolve,reject){
+//     axios.get(url)
+//     .then(res=>{
+//       resolve(res)
+//     })
+//   })
+//   return parchi;
+// }
+// dataFetcher(`https://randomuser.me/api/`)
+// .then(function(res){
+//   console.log(res)
+// })
+
+//----by ASYNC/AWAIT-----
+
+async function dataFetcher(url){
+   const result =await axios.get(url)
+   return await result;
 }
-abcd()
+async function hh(){
+ const data=await dataFetcher(`https://randomuser.me/api/`)
+ console.log(data)
+}
+hh()

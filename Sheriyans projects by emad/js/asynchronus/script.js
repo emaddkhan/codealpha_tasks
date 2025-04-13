@@ -102,4 +102,38 @@
 
 
                                                //--------------CALLBACKS---------------------*
-//callback kuch khas nhi sirf aik function hota hai bss thoda special ye hai k isse paas kia jata hai as an argument jb koi particuler async code chl jaye
+//callback kuch khas nhi sirf aik function hota hai bss thoda special ye hai k isse pass kia jata hai as an argument jb koi particuler async code chl jaye 
+
+// function abcd(a, b){
+//   b()
+// }
+// abcd(1,function(){console.log("callback")})
+
+//to use kese krna hai
+//callback basically aik function toh ap is funcftion me woh sb kuch likh do jo aap ko chalana ho jb answere aajaye aur isse tb chalao 
+// jb aap ka async code chal chuka ho
+
+// function doSomeAsyncTask (url,callback){
+//   fetch(url)
+//   .then(raw=>raw.json())
+//   .then(res=>{
+//     callback(res)
+//   })
+// }
+// doSomeAsyncTask(`https://randomuser.me/api/`,function(res){
+//   console.log(res.results[0].gender,res.results[0].email,res.results[0].name.first)
+// })
+
+//----------------------------------------------------*-ASYNC/AWAIT-*-----------------------------------------------
+//koi function bnao or uske ander jo bhi dil me async code likh do or jb aap async code likhte ho toh baad wali line pehle chal jati hai kiu k 
+//async side stack me hot hai or agr baad wali line async k basis pr hui toh aapka code fail hojaega woh isliye kiu aka code depend krta hai 
+//async code pe jo k baad me chale ga sync code chalne k baad
+//with asyn/await app async code bhi aise likh skte ho jese aap normal sync code likh rhe ho
+//await --- means---agli line tb tk nah chalao jb tk is ka answere nah mil jae lekin await ki aik requirement hai apko await k parent function pr await 
+//lagana hoga
+async function abcd() {
+  let a = await fetch(`https://randomuser.me/api/`);
+  a=await a.json()
+  console.log(a)
+}
+abcd()

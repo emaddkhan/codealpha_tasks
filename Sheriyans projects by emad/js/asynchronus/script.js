@@ -172,12 +172,44 @@
 
 //----by ASYNC/AWAIT-----
 
-async function dataFetcher(url){
-   const result =await axios.get(url)
-   return await result;
+// async function dataFetcher(url){
+//    const result =await axios.get(url)
+//    return await result;
+// }
+// async function hh(){
+//  const data=await dataFetcher(`https://randomuser.me/api/`)
+//  console.log(data)
+// }
+// hh()
+
+//--------------------------------------------------*-GENERATORS-*------------------------------------------------
+//app program k execution ko rok skte ho or bol skte ho ab agla step kro
+//genrater bnta kese hai???
+//koi bhi aam fuction k aage *laga do woh generator bn jata hai for example
+// function* printNumbers(){
+//   console.log("started")
+//   yield 1;
+//   console.log("first")
+//   yield 2;
+//   console.log("second")
+//   yield 3;
+// }
+// const ans =printNumbers();
+// console.log(ans.next().value)
+// console.log(ans.next().value)
+// console.log(ans.next().value)
+
+//--------------------------------------------------*-WEB WORKERS-*------------------------------------------------
+//usually hamara pura code single thread pr chalta hai pr kahin baar kuch bare calculations perfoam krne pr jate hai jis ki aap ka mai n thread
+//  busy hojata hai ya phr woh kafi zyada loaded ho jata hai toh ap ki baqi task slow hojata hain
+//is situation ko achy se handle krne k lia hum web workers use krty hain,aap chaho toh apna koi task web worker ko bhej skte ho jo k jo k dusre thread me
+//us ko perfoam krega and apka main threa efficiently baaqi cheezon ko handle kr ske ga
+//web worker kesy bnte hain???
+//aap apni main js file se data send kr skte ho or ap worker file pe data accept kroge and jo perfoam krna hai kroge and waha se data wapas main file bhejo
+//gai and main file me wapas accept kro ge
+var nums =Array.from({length:10000},(_,b)=>b+1)
+const worker = new Worker("worker.js")
+worker.postMessage(nums)
+worker.onmessage=function(data){
+  console.log(data.data)
 }
-async function hh(){
- const data=await dataFetcher(`https://randomuser.me/api/`)
- console.log(data)
-}
-hh()

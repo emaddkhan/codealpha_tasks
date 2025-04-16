@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100vh;
+    width: 100%;
+    background-color: #dadada;
+    padding: 5vh;
+}
+.box1{
+    height: 250px;
+    width: 250px;
+    background-color: red;
+    margin: 10px 0;
+}
+.box2{
+    height: 250px;
+    width: 250px;
+    background-color: royalblue;
+    margin: 10px 0;
+}
+.box3{
+    height: 250px;
+    width: 250px;
+    background-color: lightseagreen;
+    margin: 10px 0;
+}

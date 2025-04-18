@@ -9,7 +9,7 @@ function loadindAnimation() {
       } else {
         h5Timer.innerHTML = grow;
       }
-    }, 33);
+    }, 1);//baad me iski value bhi 33ms krdena
   }
 
   const tl = gsap.timeline();
@@ -34,7 +34,7 @@ function loadindAnimation() {
 
   tl.to("#loader", {
     opacity: 0,
-    delay: 4,
+    delay: 0, //duration baad me 4 krdena
     duration: 0.2,
   });
   tl.from("#page1", {
@@ -47,27 +47,42 @@ function loadindAnimation() {
   tl.to("#loader", {
     display: "none",
   });
+  tl.from("#nav",{
+    opacity:0,
+  })
+  tl.from(["#hero1 h1,#hero2 h1,#hero3 h2,#hero3 h3,#hero4 h1"],{
+    y:250,
+    stagger:0.2,
+  })
 }
-const cursor = document.querySelector("#cursor");
-let mouseX = 0;
-let mouseY = 0;
-let posX = 0;
-let posY = 0;
-document.addEventListener("mousemove", (e) => {
+function cursorAnimation() {
+  const cursor = document.querySelector("#cursor");
+  let mouseX = 0;
+  let mouseY = 0;
+  let posX = 0;
+  let posY = 0;
+  document.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-});
+  });
 
-function animateCursor() {
+  function animateCursor() {
     posX += (mouseX - posX) * 0.1;
     posY += (mouseY - posY) * 0.1;
 
     gsap.set(cursor, {
-        left: posX,
-        top: posY
+      left: posX,
+      top: posY,
     });
 
     requestAnimationFrame(animateCursor);
-}
+  }
 
-animateCursor();
+  animateCursor();
+  Shery.makeMagnet("#navPart2 h4", {
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+  });
+}
+loadindAnimation();
+cursorAnimation();

@@ -9,6 +9,9 @@ html,body{
     height: 100%;
     width: 100%;
 }
+body{
+    overflow-x: hidden;
+}
 #cursor{
     position: fixed;
     z-index: 999;
@@ -205,4 +208,59 @@ html,body{
 }
 #video-cursor{
     font-size: 2vw;
+}
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #4f4f4f;
+    position: relative;
+}
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-top: 5vh;
+}
+.page4-content{
+    width: 72vw;
+    margin-left: 27vw;
+}
+.page4-content h1{
+    text-transform: uppercase;
+    font-size: 7vw;
+}
+.page4-content .underline{
+    height: 2px;
+    width: 96%;
+    background-color:#fff ;
+    margin: 5vw 0;
+}
+.page4-content>p{
+    font-size: 2.1vw;
+    width: 48%;
+    margin-bottom: 3vw;
+}
+#page4Flex{
+    display: flex;
+}
+#page4Flex img{
+    width: 47%;
+}
+#page4Flex p{
+    font-size: 0.9vw;
+    width: 19%;
+    margin-left: 1.3vw;
+}
+#blueCard{
+    background-color: #3F7DF4;
+    padding: 4vw 2vw;
+    width: 30vw;
+}
+.blueElem{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.blueElem p{
+    width: 50%;
 }

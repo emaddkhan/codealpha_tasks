@@ -219,25 +219,35 @@ body{
     min-height: 100vh;
     width: 100%;
     position: relative;
-    padding-top: 5vh;
+    padding: 7vw 0;
 }
 .page4-content{
     width: 72vw;
     margin-left: 27vw;
+}
+.page4-content::before{
+    content: "03";
+    font-size: 3vw;
+    font-family: 'silk serif';
+    position: absolute;
+    top: 6.33%;
+    left: 20%;
 }
 .page4-content h1{
     text-transform: uppercase;
     font-size: 7vw;
 }
 .page4-content .underline{
-    height: 2px;
+    height: 1px;
     width: 96%;
     background-color:#fff ;
-    margin: 5vw 0;
+    margin-top: 4vw;
+    margin-bottom: 5.7vw;
 }
 .page4-content>p{
     font-size: 2.1vw;
-    width: 48%;
+    width: 46%;
+    line-height: 2.4vw;
     margin-bottom: 3vw;
 }
 #page4Flex{
@@ -254,13 +264,27 @@ body{
 #blueCard{
     background-color: #3F7DF4;
     padding: 4vw 2vw;
-    width: 30vw;
+    width: 33vw;
+    position: relative;
+    margin-top: -37.5vh;
+    margin-left: 24vw;
 }
 .blueElem{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    padding: 1.7vw 0;
+    border-bottom: 2px solid #ffffff70;
+}
+.blueElem h4{
+    font-size: 1.4vw;
+    font-weight: 500;
 }
 .blueElem p{
-    width: 50%;
+    width: 40%;
+    font-size: 0.7vw;
+}
+#page5{
+    min-height: 100vh;
+    width: 100%;
 }

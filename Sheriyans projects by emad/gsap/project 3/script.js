@@ -27,7 +27,7 @@ function loadindAnimation() {
       loaderTimer();
     },
   });
-  tl.to(" .line>h2", {
+  tl.to(" .line h2", {
     animationName: "lineH2",
     opacity: 1,
   });
@@ -39,7 +39,7 @@ function loadindAnimation() {
   });
   tl.from("#page1", {
     y: 1600,
-    duration: 0.5,
+    duration: 0.2,
     opacity: 0,
     ease: Power4,
   });
@@ -50,9 +50,9 @@ function loadindAnimation() {
   tl.from("#nav",{
     opacity:0,
   })
-  tl.from(["#hero1 h1,#hero2 h1,.hero3Head,#hero3 h3,#hero4 h1"],{
-    y:250,
-    stagger:0.2,
+  tl.from("#hero1 h1,#hero2 h1,#hero3 h2,#hero3 h3,#hero4 h1",{
+    y:120,
+    stagger:0.1,
   })
 }
 function cursorAnimation() {

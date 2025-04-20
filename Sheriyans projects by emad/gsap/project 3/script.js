@@ -140,7 +140,7 @@ cursorAnimation();
 
 function sheryAnimation() {
   Shery.imageEffect(".imgDiv", {
-    style: 1 /*OR 5 for different variant */,
+    style: 6 ,
     config: {
       a: { value: 2, range: [0, 30] },
       b: { value: 0.7, range: [-1, 1] },
@@ -172,7 +172,6 @@ function sheryAnimation() {
       noise_height: { value: 0.43, range: [0, 2] },
       noise_scale: { value: 7.63, range: [0, 100] },
     },
-    debug:true,
     gooey: true,
   });
 }

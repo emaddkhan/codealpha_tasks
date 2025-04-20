@@ -174,7 +174,7 @@ body{
     margin-right: 9px;
 }
 #page2{
-    min-height: 113vh;
+    min-height: 128vh;
     width: 100%;
     position: relative;
     padding-top: 22vh;
@@ -219,25 +219,168 @@ body{
     width: 100%;
     position: relative;
     padding: 7vh 2vw;
-    margin-bottom: 20vh;
+    margin-bottom: 40vh;
 }
 #img-div-container{
     padding: 1vw;
-    background-color: red;
     position: relative; 
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 .imgDiv{
     flex-shrink: 0;
-    height: 33vw;
-    width: 24vw;
-    background-color: blue;
+    height: 30vw;
+    width: 22vw;
     position:relative;
     overflow: hidden;
     flex-shrink: 0;
+    margin: .8vw 0.8vw 0 0.8vw;
+}
+#imgDiv3{
+    width: 34.4vw;
+    height: 40vw;
+    margin: 0vw 0.8vw 0.8vw 0.8vw;
+}
+#imgDivHead3{
+    margin-top: 10vh;
+    padding-bottom: 5vh;
+}
+#imgDiv4{
+    width: 32vw;
+    height: 40vw;
+}
+.imgDivElemDets{
+    padding: 3vh 0;
+    margin: 0 0.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+}
+.imgDivElemDets h5:nth-of-type(1) {
+    width: 70%;
+}
+.imgDivElemDets h5{
+    font-size: .9vw;
+    line-height: 1.2vw;
+    font-weight: 500;
+}
+.imgDivHead{
+    padding: 2vh;
+}
+.imgDivHead h2{
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+
+.imgDivElemDets3{
+    padding: 2vh 0 2vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    margin: 0.8vw 0.8vw 0.8vw 0.8vw;
+}
+.imgDivElemDets3 h5:nth-of-type(1) {
+    width: 70%;
+}
+.imgDivElemDets3 h5{
+    font-size: .9vw;
+    line-height: 1.2vw;
+    font-weight: 500;
+}
+.imgDivElemDets2{
+    padding: 2vh 0 2vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    margin: 0.8vw 0.8vw 0.8vw 0.8vw;
+}
+.imgDivElemDets2 h5:nth-of-type(1) {
+    width: 70%;
+}
+.imgDivElemDets2 h5{
+    font-size: .9vw;
+    line-height: 1.2vw;
+    font-weight: 500;
+}
+
+.imgDevElem2 .imgDiv{
+    height: 40vw;
+    width: 34vw;
+}
+.imgDevElem4 .imgDiv{
+    margin-left: 0.8vw;
+}
+.page3Circle1{
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 56vh;
+    position: relative;
+    margin-left: 10vw;
+}
+.page3Circle1 svg{
+    height: 30%;
+}
+.circle-in{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0;
+    transition: all ease 0.3s;
+    border-radius: 50%;
+}
+.circle-in p{
+    font-size:1vw;
+    width: 60%;
+    font-weight: 500;
+    scale: 0;
+    color: #000;
+    transition: all ease 0.3s;
+    transition-delay: 0.2s;
+    opacity: 0;
+}
+.page3Circle1:hover .circle-in{
+    scale: 1;
+}
+.page3Circle1:hover p{
+    scale: 1;
+    opacity: 1;
+}
+.page3Circle2{
+    height: 23vw;
+    position: relative;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page3Circle2 svg{
+    height: 30%;
+    rotate: -40deg;
+}
+.page3Circle2:hover .circle-in{
+    scale: 1;
+}
+.page3Circle2:hover p{
+    scale: 1;
+    opacity: 1;
 }
 .imgDiv img{
     height: 100%;

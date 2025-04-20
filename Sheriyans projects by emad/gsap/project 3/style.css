@@ -124,20 +124,27 @@ body{
     font-weight: 500;
 }
 .hero {
-    /* background-color: red; */
-    width: 72%;
-    margin-left: 27%;
+    width: 100%;
+   padding-left: 27%;
     height: fit-content;
     /* background-color: red; */
-    overflow: hidden;
+    overflow-y: hidden;
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 99999;
+}
+#hero1 h1::before{
+    content: "01";
+    font-size: 3vw;
+    font-family: 'silk serif';
+    position: absolute;
+    font-weight: 100;
+    top: -17%;
+    left: -19.8%;
 }
 
 .hero:nth-child(2) {
-    margin-top: 15vh;
+    margin-top: 13vh;
 }
 
 .hero h1 {
@@ -147,8 +154,6 @@ body{
     line-height: 7.2vw;
 
 }
-
-
 .hero h2, .hero h3 {
     font-size: 7.2vw;
     font-weight: 500;
@@ -219,25 +224,28 @@ body{
     min-height: 100vh;
     width: 100%;
     position: relative;
-    padding: 7vw 0;
+    padding-top: 7vw;
+    padding-bottom: 1vw;
 }
 .page4-content{
     width: 72vw;
     margin-left: 27vw;
 }
-.page4-content::before{
+.page4-content h1{
+    text-transform: uppercase;
+    position: relative;
+    font-size: 7vw;
+}
+.page4-content h1::before{
     content: "03";
     font-size: 3vw;
     font-family: 'silk serif';
     position: absolute;
-    top: 6.33%;
-    left: 20%;
+    font-weight: 100;
+    top: 7%;
+    left: -11.8%;
 }
-.page4-content h1{
-    text-transform: uppercase;
-    font-size: 7vw;
-}
-.page4-content .underline{
+.underline{
     height: 1px;
     width: 96%;
     background-color:#fff ;
@@ -263,8 +271,8 @@ body{
 }
 #blueCard{
     background-color: #3F7DF4;
-    padding: 4vw 2vw;
-    width: 33vw;
+    padding: 2.5vw 2vw 3.4vw 2vw;
+    width: 33.3vw;
     position: relative;
     margin-top: -37.5vh;
     margin-left: 24vw;
@@ -273,7 +281,7 @@ body{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 1.7vw 0;
+    padding: 2vw 0;
     border-bottom: 2px solid #ffffff70;
 }
 .blueElem h4{
@@ -285,6 +293,124 @@ body{
     font-size: 0.7vw;
 }
 #page5{
-    min-height: 100vh;
+    min-height: 80vh;
     width: 100%;
+}
+.elem{
+    white-space: nowrap;
+    overflow-x: hidden;
+    height: fit-content;
+    overflow-y: hidden;
+}
+.elem h1{
+    font-size: 7vw;
+    line-height: 7vw;
+    margin-right: 16px;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    color: transparent;
+    text-transform: uppercase;
+    display: inline-block;
+    animation-name: movingText;
+    animation-duration: 25s;
+    margin-bottom: 0vw;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes movingText {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+
+.elem2{
+    white-space: nowrap;
+    overflow-x: hidden;
+    height: fit-content;
+    overflow-y: hidden;
+}
+.elem2 h1{
+    font-size: 7vw;
+    line-height: 7vw;
+    margin-right: 16px;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    color: transparent;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0vw;
+    animation-name: movingText;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+.elem span,.elem2 span{
+    font-family: "silk serif";
+    -webkit-text-stroke: 1px #fff;
+    font-style: italic;
+    color: transparent;
+}
+#footer{
+    height: 92vh;
+    position: relative;
+    width: 100%;
+    padding-left: 27vw;
+}
+#footer h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+}
+#footer h1::before{
+    content: "04";
+    font-size: 3vw;
+    position: absolute;
+    top: 7%;
+    left: -11.8%;
+    font-family: 'silk serif';
+    font-weight: 100;
+}
+.underLine2{
+    margin: 4vw 0;
+    height: 1px;
+    width: 95%;
+    background-color: #fff;
+}
+.underLine3{
+    margin-top: 8vw;
+    margin-bottom: 2vw;
+    height: 1px;
+    width: 95%;
+    background-color: #fff;
+}
+#footer-div{
+    display: flex;
+    align-items: flex-start;
+    padding-right: 13vw;
+    padding-top: 1vw;
+    margin-bottom: 6vw;
+    justify-content: space-between;
+}
+#footer-div h6{
+    font-size: 0.8vw;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 1.5vw;
+}
+.box{
+    width: 20%;
+}
+#footer-div h5{
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    font-weight: 500;
+    letter-spacing:-1px;
+}
+#footer p{
+    margin-top: 2.8vw;
 }

@@ -10,10 +10,14 @@
     />
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aayushchouhan24/sheryjs@main/dist/Shery.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -35,7 +39,7 @@
       </div>
     </div>
     <div id="main">
-      <div id="page1">
+      <div id="page1" data-scroll data-scroll-speed="-">
         <div id="nav">
           <svg class="brand__svg" width="71" height="27" viewBox="0 0 71 27">
             <path
@@ -100,22 +104,42 @@
           <h1>experience</h1>
         </div>
       </div>
-      <div id="page2">
+      <div id="page2" data-scroll data-scroll-speed="-2">
         <div class="videoContainer">
           <div id="video-cursor">
             <i class="ri-play-fill"></i>
           </div>
           <img src="./images/Showreel-2022-preview-1.jpg" alt="" />
           <video
-            autoplay
             loop
             muted
             src="https://obys.agency/wp-content/uploads/2024/12/Obys-Showreel-2024.mp4"
           ></video>
         </div>
       </div>
-      <div id="page3"></div>
-      <div id="page4">
+      <div id="page3" data-scroll data-scroll-speed="-2">
+        <h1>our projects</h1>
+        <div class="underline"></div>
+        <div id="img-div-container">
+          <div class="imgDiv">
+            <img src="./images/img1-1.jpg" alt="" />
+            <img src="./images/img1-2.jpg" alt="" />
+          </div>
+          <div class="imgDiv">
+            <img src="./images/Olga_Prudka_1.png" alt="" />
+            <img src="./images/Olga_Prudka_2.png" alt="" />
+          </div>
+          <div class="imgDiv">
+            <img src="./images/Olga_Prudka_1.png" alt="" />
+            <img src="./images/Olga_Prudka_2.png" alt="" />
+          </div>
+          <div class="imgDiv">
+            <img src="./images/Olga_Prudka_1.png" alt="" />
+            <img src="./images/Olga_Prudka_2.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="page4" data-scroll data-scroll-speed="-2">
         <div class="page4-content">
           <h1>About Obys</h1>
           <div class="underline"></div>
@@ -161,7 +185,7 @@
           <div class="underline"></div>
         </div>
       </div>
-      <div id="page5">
+      <div id="page5" data-scroll data-scroll-speed="-2">
         <div class="elem">
           <h1><span>Sport</span> - Fashion - Technology -</h1>
           <h1><span>Sport</span> - Fashion - Technology -</h1>
@@ -179,7 +203,7 @@
           <h1><span>Science</span> - Partners - Travel -</h1>
         </div>
       </div>
-      <div id="footer">
+      <div id="footer" data-scroll>
         <h1>Let's Create</h1>
         <div class="underLine2"></div>
 
@@ -214,10 +238,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/sheryjs/dist/Shery.js"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <!-- controlKit for debunging -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+    <!-- Shery JS cdn  -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/aayushchouhan24/sheryjs@main/dist/Shery.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

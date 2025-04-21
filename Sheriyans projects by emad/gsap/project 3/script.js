@@ -1,3 +1,6 @@
+const videoContainer = document.querySelector(".videoContainer");
+const page2Video = document.querySelector(".videoContainer video");
+const videoCursor = document.querySelector("#video-cursor");
 function locomotiveAnimation() {
   const scroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
@@ -134,6 +137,46 @@ function cursorAnimation() {
     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
     duration: 1,
   });
+  videoContainer.addEventListener('mouseenter',()=>{
+    videoContainer.addEventListener('mousemove',function(dets){
+      gsap.to("#cursor",{
+        opacity:0,
+      })
+      gsap.to("#video-cursor",{
+        top:dets.y - 300,
+        left:dets.x - 570,
+      })
+    })
+  })
+  videoContainer.addEventListener("mouseleave",function(){
+    gsap.to("#cursor",{
+      opacity:1,
+    })
+    gsap.to("#video-cursor",{
+      top: "-10%",
+      left:"80%",
+    })
+  })
+  var flag =0;
+  videoContainer.addEventListener("click",function(){
+    if(flag==0){
+      page2Video.play(),
+    page2Video.style.opacity =1;
+    videoCursor.innerHTML=`<i class="ri-pause-line"></i>`
+    gsap.to("#video-cursor",{
+      scale:0.5,
+    })
+    flag=1
+    }else{
+      page2Video.pause(),
+    page2Video.style.opacity =0;
+    videoCursor.innerHTML=`<i class="ri-play-fill"></i>`
+    gsap.to("#video-cursor",{
+      scale:1,
+    })
+    flag=0
+    }
+  })
 }
 loadindAnimation();
 cursorAnimation();

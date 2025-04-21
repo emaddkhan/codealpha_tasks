@@ -185,18 +185,23 @@ body{
     width: 73vw;
     position: relative;
     left: 27%;
+    background-image: url("./images/Showreel-2022-preview-1.jpg");
+    background-size: cover;
+    background-position: center;
 }
-.videoContainer img{
+/* .videoContainer img{
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
     object-fit: cover;
-}
+} */
 .videoContainer video{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: center;
+    opacity: 0;
 }
 #video-cursor{
     background-color: #FFA63D;

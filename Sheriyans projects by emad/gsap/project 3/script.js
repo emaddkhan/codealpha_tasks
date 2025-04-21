@@ -1,6 +1,7 @@
 const videoContainer = document.querySelector(".videoContainer");
 const page2Video = document.querySelector(".videoContainer video");
 const videoCursor = document.querySelector("#video-cursor");
+const hero3 = document.querySelector("#hero3")
 function locomotiveAnimation() {
   const scroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
@@ -44,7 +45,6 @@ function locomotiveAnimation() {
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
   ScrollTrigger.refresh();
 }
-locomotiveAnimation();
 function loadindAnimation() {
   const h5Timer = document.querySelector("#line1Part1 h5");
 
@@ -178,9 +178,6 @@ function cursorAnimation() {
     }
   })
 }
-loadindAnimation();
-cursorAnimation();
-
 function sheryAnimation() {
   Shery.imageEffect(".imgDiv", {
     style: 6 ,
@@ -218,4 +215,29 @@ function sheryAnimation() {
     gooey: true,
   });
 }
+function flagAnimation(){
+  document.addEventListener("mousemove",function(dets){
+    gsap.to("#flag",{
+      top:dets.y,
+      left:dets.x
+    })
+  })
+  hero3.addEventListener("mouseenter",function(){
+    gsap.to("#flag",{
+      opacity:1,
+    })
+  })
+  hero3.addEventListener("mouseleave",function(){
+    gsap.to("#flag",{
+      opacity:0,
+    })
+  })
+}
+locomotiveAnimation();
+loadindAnimation();
+cursorAnimation();
 sheryAnimation();
+flagAnimation();
+
+
+

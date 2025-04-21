@@ -485,7 +485,8 @@ body{
     font-size: 0.7vw;
 }
 #page5{
-    min-height: 80vh;
+    min-height: 90vh;
+    margin: 5vh 0;
     width: 100%;
 }
 .elem{
@@ -617,7 +618,6 @@ body{
     left: 0;
     transform: translate(-50%,-50%);
     opacity: 0;
-    
 }
 #hero3{
     z-index: 999;

@@ -28,7 +28,7 @@ body{
     height: 100vh;
     width: 100%;
     position: fixed;
-    z-index: 999;
+    z-index: 999999;
     overflow-y: hidden;
     padding: 25vh 10vw;
 }
@@ -554,12 +554,20 @@ body{
     width: 100%;
     padding-left: 27vw;
 }
-#footer h1{
+.footerH1{
     font-size: 7vw;
     text-transform: uppercase;
     position: relative;
+    color: white;
 }
-#footer h1::before{
+.txtTransformation span{
+    font-family: 'silk serif';
+    -webkit-text-stroke: 2px #fff;
+    font-weight: 500;
+    color: transparent;
+    font-style: italic;
+}
+.footerH1::before{
     content: "04";
     font-size: 3vw;
     position: absolute;
@@ -620,6 +628,6 @@ body{
     opacity: 0;
 }
 #hero3{
-    z-index: 999;
+    z-index: 9;
     position: relative;
 }

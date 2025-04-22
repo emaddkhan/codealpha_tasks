@@ -1,7 +1,7 @@
 const videoContainer = document.querySelector(".videoContainer");
 const page2Video = document.querySelector(".videoContainer video");
 const videoCursor = document.querySelector("#video-cursor");
-const hero3 = document.querySelector("#hero3")
+const hero3 = document.querySelector("#hero3");
 function locomotiveAnimation() {
   const scroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
@@ -56,7 +56,7 @@ function loadindAnimation() {
       } else {
         h5Timer.innerHTML = grow;
       }
-    }, 1); //baad me iski value bhi 33ms krdena
+    }, 33); //baad me iski value bhi 33ms krdena
   }
 
   const tl = gsap.timeline();
@@ -81,7 +81,7 @@ function loadindAnimation() {
 
   tl.to("#loader", {
     opacity: 0,
-    delay: 0, //duration baad me 4 krdena
+    delay: 4, //duration baad me 4 krdena
     duration: 0.2,
   });
   tl.from("#page1", {
@@ -233,11 +233,48 @@ function flagAnimation(){
     })
   })
 }
+function textAnimation(){
+const footerH1 = document.querySelector(".footerH1")
+
+  footerH1.addEventListener("mouseenter", function () {
+    gsap.fromTo(
+      ".footerH1",
+      { opacity: 0 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.5,
+        delay: 0.2,
+        onStart: function () {
+          if (window.jQuery) {
+            footerH1.classList.add("txtTransformation")
+            $('#footer h1').textillate({ in: { effect: 'fadeIn' } });
+          }
+        }
+      }
+    );
+  });
+
+  footerH1.addEventListener("mouseleave", function () {
+    gsap.from(".footerH1", {
+      opacity: 0,
+      x:0,
+      duration: 1,
+      onStart: function () {
+        if (window.jQuery) {
+          footerH1.classList.remove("txtTransformation")
+          $('#footer h1').textillate({ in: { effect: 'fadeOut' } });
+        }
+      }
+    });
+  });
+}
 locomotiveAnimation();
 loadindAnimation();
 cursorAnimation();
 sheryAnimation();
 flagAnimation();
+textAnimation();
 
 
 

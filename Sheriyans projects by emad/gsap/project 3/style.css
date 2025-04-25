@@ -11,6 +11,7 @@ html,body{
 }
 body{
     overflow-x: hidden;
+    cursor: none;
 }
 #cursor{
     position: fixed;
@@ -427,6 +428,10 @@ body{
     text-transform: uppercase;
     position: relative;
     font-size: 7vw;
+}
+.aboutPara span{
+    opacity: 0;
+    display: inline-block;
 }
 .page4-content h1::before{
     content: "03";

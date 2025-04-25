@@ -2,6 +2,7 @@ const videoContainer = document.querySelector(".videoContainer");
 const page2Video = document.querySelector(".videoContainer video");
 const videoCursor = document.querySelector("#video-cursor");
 const hero3 = document.querySelector("#hero3");
+const aboutPara = document.querySelector(".aboutPara")
 function locomotiveAnimation() {
   const scroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
@@ -269,12 +270,38 @@ const footerH1 = document.querySelector(".footerH1")
     });
   });
 }
+function letterAnimation(){
+  let clutter = "";
+  const splitedAboutPara = aboutPara.textContent.split("");
+  splitedAboutPara.forEach(function(char){
+    clutter += `<span>${char}</span>`;
+  });
+  aboutPara.innerHTML = clutter;
+  gsap.to(".aboutPara span", {
+    opacity: 1,
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: "#page4",
+      scroller: "#main",   // only if you're using something like locomotive scroll or a custom scroller
+      start: "top 20%",
+      end: "top -10%",     // fixed typo: 'end' should be a position relative to the trigger
+      scrub: 2,
+    }
+  });
+}
+function underlineAnimation(){
+
+}
+
+
 locomotiveAnimation();
 loadindAnimation();
 cursorAnimation();
 sheryAnimation();
 flagAnimation();
 textAnimation();
+letterAnimation();
+underlineAnimation();
 
 
 

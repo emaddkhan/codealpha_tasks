@@ -8,4 +8,9 @@ jb website pr khoob sara change hota hai toh woh bhi rerender hota hai jo abhi t
 is cheez se bacne ke lie facebook ne react creation kia
 
 VIRTUAL DOM
-agr website me koi aik cheez change hui toh virtual dom me sirf whi cheez change hogi baqi cheezein phr se rerender nhi hongi 
+agr website me koi aik cheez change hui toh virtual dom me sirf whi cheez change hogi baqi cheezein phr se rerender nhi hongi  
+
+
+
+
+

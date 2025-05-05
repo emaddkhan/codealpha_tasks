@@ -1,0 +1,11 @@
+react is not a language
+react is not also a framework
+react is also not a technology
+react is a javascript library
+facebook k engineer ne 2013 me bnaya or 2015 me open source hui
+
+jb website pr khoob sara change hota hai toh woh bhi rerender hota hai jo abhi tk change hua bhi nhi jo website ko bohot slow krte hain
+is cheez se bacne ke lie facebook ne react creation kia
+
+VIRTUAL DOM
+agr website me koi aik cheez change hui toh virtual dom me sirf whi cheez change hogi baqi cheezein phr se rerender nhi hongi 

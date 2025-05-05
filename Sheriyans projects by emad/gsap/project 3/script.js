@@ -57,7 +57,7 @@ function loadindAnimation() {
       } else {
         h5Timer.innerHTML = grow;
       }
-    }, 33); //baad me iski value bhi 33ms krdena
+    }, 33); //baad me iski value bhi 33ms kroonga project k baad
   }
 
   const tl = gsap.timeline();
@@ -82,7 +82,7 @@ function loadindAnimation() {
 
   tl.to("#loader", {
     opacity: 0,
-    delay: 4, //duration baad me 4 krdena
+    delay: 4, //duration baad me 4 kroonga project k baad
     duration: 0.2,
   });
   tl.from("#page1", {
@@ -282,15 +282,12 @@ function letterAnimation(){
     stagger: 0.1,
     scrollTrigger: {
       trigger: "#page4",
-      scroller: "#main",   // only if you're using something like locomotive scroll or a custom scroller
+      scroller: "#main",
       start: "top 20%",
-      end: "top -10%",     // fixed typo: 'end' should be a position relative to the trigger
+      end: "top -10%",
       scrub: 2,
     }
   });
-}
-function underlineAnimation(){
-
 }
 
 
@@ -301,7 +298,6 @@ sheryAnimation();
 flagAnimation();
 textAnimation();
 letterAnimation();
-underlineAnimation();
 
 
 

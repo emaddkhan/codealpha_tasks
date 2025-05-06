@@ -97,3 +97,47 @@
 // toh agr koi object return krwana hai toh apko arrow k badd fat bracket() k under object likhna parega tb jake woh return hoga
 // const abcd =()=>({name:"emad",age:1234})
 // abcd() // now it will return an object
+
+
+//------MAP FILTER-----***
+//dono hi array pr chalte hain or dono ka kam hai hai array pr kuch perfoem krna and "aik naya array return krna"
+
+//map---array me hr element pr kuch perfoam kro or naye array me rakho
+//foreach k andr ata hai function or function k andr ati hai value isi tarah map me bhi yhi hota hai jese ki
+// map k andr bhi arrow function wali cheezain apply hoti hai jese k map arrow function hai toh agr single parameter hai toh ap uska fat hta
+// map k andr return krna zaroori hai kiu k map k under return krne ki wajah se elem naye array me place hote hain
+//skte ho or agr koi sngle line ka code hai toh app usse direct arrow k badd bhi likh skte ho baghair return krwaye or koi ek se zyada line
+//ka code hai toh uske liye phr return likhna parega
+// var arr = [0,1,2,3,4]
+// const ans= arr.map(value=>value*2) //isme ye horaha hai k arr ka hr element ayega multiply hoga 12 se or kiu k return horaha hai toh naye
+//array me element palce hojaiga 
+//hum ye sb  kiu kr rhe hain chalo aik scinario dekhte hain
+//state aik array hai usme numbers hain and apko hr number ko + krna hai
+
+// var state = [1,2,3,4,5]
+// const ans= state.map((value)=>value+1)
+
+//aik or scinario ye hai k hamare pass aik array hai jisme me 5 se bade numbers me 5 add krdo or baqi k number weese hi rehne do
+
+// var state = [156,1,2,3,5,6,7,8,9,10,11,12,13,14,15]
+// const ans = state.map((value)=> value>5?value+5:value)
+
+//map filter me ak hi fark hai matlab k map array k andr k sare elem return krta hai matla k count km kam nhin hoga jb k filter elem ko km kr
+//skta hai 
+
+// jb original array ka size km na hona ho wahan map use hota hai
+// jb original array ka size km krna hona ho wahan filter use hota hai
+///question
+//aik array sbhi number ko jo 5 se bare hain 10 add krdo or jo 5 se chotte hain unhe htaa do
+//filter k liye ye zaroori hai k agr ap arrow k baad jo value rkh rhe ho woh ya toh true honi chahiye ya false honi chahiye agr app hath se 
+//true likhdoge toh array k andr jitne bhi elem honge woh sare return kr dega
+// var arr = [1,2,3,4,5,6]
+// var ans = arr.filter((elem)=>elem>4)
+
+//ab  mere pass aik object hai or mujy whi data chahiye jiska gender male ho toh iske liye bhi filter use hoga
+const arr = [
+    {name:"njsj",gender:"male"},
+    {name:"njsjncj",gender:"female"},
+    {name:"njcknm",gender:"female"},
+]
+const ans = arr.filter((elem)=>elem.gender==="male");

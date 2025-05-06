@@ -135,9 +135,14 @@
 // var ans = arr.filter((elem)=>elem>4)
 
 //ab  mere pass aik object hai or mujy whi data chahiye jiska gender male ho toh iske liye bhi filter use hoga
-const arr = [
-    {name:"njsj",gender:"male"},
-    {name:"njsjncj",gender:"female"},
-    {name:"njcknm",gender:"female"},
-]
-const ans = arr.filter((elem)=>elem.gender==="male");
+// const arr = [
+//     {name:"njsj",gender:"male"},
+//     {name:"njsjncj",gender:"female"},
+//     {name:"njcknm",gender:"female"},
+// ]
+// const ans = arr.filter((elem)=>elem.gender==="male");
+
+
+//what is jsx 
+// jsx is actually a similar looking like html structure but with superpowers
+//jsx sirf dikhta hai html ki tarah hota nhi

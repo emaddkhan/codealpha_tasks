@@ -15,6 +15,7 @@ function Card() {
       name: "Books",
       description:
         "The internet’s source for visuals.Powered by creators everywhere.",
+      instock: true,
     },
     {
       image:
@@ -22,6 +23,7 @@ function Card() {
       name: "Car on road",
       description:
         "The internet’s source for visuals.Powered by creators everywhere.",
+      instock: false,
     },
     {
       image:
@@ -29,12 +31,16 @@ function Card() {
       name: "Mobile Payment",
       description:
         "The internet’s source for visuals.Powered by creators everywhere.",
+      instock: true,
     },
   ];
   return (
     <div className="w-full flex items-center justify-center gap-10 h-screen bg-zinc-200">
-      {data.map((elem,index) => (
-        <div key={index} className="w-52 bg-zinc-100 rounded-md overflow-hidden">
+      {data.map((elem, index) => (
+        <div
+          key={index}
+          className="w-52 bg-zinc-100 rounded-md overflow-hidden"
+        >
           <div className="w-full h-32 bg-zinc-300">
             <img
               className="w-full h-full object-cover"
@@ -44,9 +50,10 @@ function Card() {
           </div>
           <div className="w-full px-3 py-4">
             <h1 className="font-semibold">{elem.name}.</h1>
-            <p className="text-xs mt-3 ">
-              {elem.description}
-            </p>
+            <p className="text-xs mt-3 ">{elem.description}</p>
+            <button className={`px-2 py-1 ${elem.instock ? "bg-blue-600" :"bg-red-600"} rounded-sm text-zinc-100 mt-4 text-xs`}>
+              {elem.instock ? "In stock" : "Out of Stock"}
+            </button>
           </div>
         </div>
       ))}
@@ -55,3 +62,6 @@ function Card() {
 }
 
 export default Card;
+
+//bhai class me agr logic liknhi ho toh sari classes select kro or unko {}me rkhdo or take hum string pass kr ske toh ``back tag k undr 
+//classes rkhein os jis class k sath khelna hai ${} toh iske undr logic likhain ge or wohh class pass krdein ge 

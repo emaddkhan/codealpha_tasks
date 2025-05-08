@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "./Components/Card";
 function App() {
+  const [score,setScore] =useState(false);
   return (
     <>
-      <Card/>
+      <div className="p-4 bg-zinc-300 h-screen w-full">
+        <h1>Score: {score}</h1>
+        <button onClick={()=>setScore(prev=>prev+1)} className="py-1 px-2 bg-green-500 rounded-full text-zinc-100">Add</button>
+        <button onClick={()=>setScore(prev=>prev-1)} className="py-1 px-2 bg-green-500 rounded-full text-zinc-100">Subtract</button>
+      </div>
     </>
   );
 }

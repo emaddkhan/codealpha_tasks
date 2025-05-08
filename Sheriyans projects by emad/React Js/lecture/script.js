@@ -146,3 +146,11 @@
 //what is jsx 
 // jsx is actually a similar looking like html structure but with superpowers
 //jsx sirf dikhta hai html ki tarah hota nhi
+
+//------------------------State------------------
+//state aik data hota hai react is data ka khayal rkhta hai jb bhi ye data change hota hai react cheezon ko update krta hai
+//state koi bhi data ho skta hai jese ki score = 0;
+//usestate hamesha aik array deta hai
+// const ans = useState(0);
+// ans[0]--value
+// ans[1]--function can update the useState value

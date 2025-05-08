@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Card from "./Components/Card";
 function App() {
-  const [score,setScore] =useState(false);
+  const [val,setVal] =useState({name:"emad",isBanned:false});
   return (
     <>
       <div className="p-4 bg-zinc-300 h-screen w-full">
-        <h1>Score: {score}</h1>
-        <button onClick={()=>setScore(prev=>prev+1)} className="py-1 px-2 bg-green-500 rounded-full text-zinc-100">Add</button>
-        <button onClick={()=>setScore(prev=>prev-1)} className="py-1 px-2 bg-green-500 rounded-full text-zinc-100">Subtract</button>
+        <h1>name: {val.name}</h1>
+        <h1>banned: {val.isBanned.toString()}</h1>
+        <button onClick={()=>setVal({...val,isBanned:(!val.isBanned)})} className={`${val.isBanned?"bg-green-500":"bg-red-500"} px-2 py-1 text-zinc-100 rounded-full`}>Change Banned</button>
       </div>
     </>
   );

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Card from "./Components/Card";
 function App() {
-  const [val,setVal] =useState({name:"emad",age:12});
+  const [val,setVal] =useState([1,2,3,4,5,6]);
   return (
     <>
       <div className="p-4 bg-zinc-300 h-screen w-full">
-        <button onClick={()=>{
-          setVal({...val,gender:"male"})
-        }}>Click</button>
+        {val.map(item=><h1>{item}</h1>)}
+       <button onClick={()=>setVal(()=>{
+        return val.filter((item,index)=>index!=val.length -1)
+       })} className="px-2 py-1 text-white text-xs bg-blue-500 rounded-full">click</button>
       </div>
     </>
   );

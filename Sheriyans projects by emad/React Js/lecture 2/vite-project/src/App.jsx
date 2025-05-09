@@ -1,14 +1,32 @@
 import React, { useState } from "react";
 import Card from "./Components/Card";
 function App() {
-  const [val,setVal] =useState([1,2,3,4,5,6]);
+  const [val, setVal] = useState([
+    { name: "hasfs", age: 21 },
+    { name: "hasfkkfs", age: 27 },
+    { name: "asfs", age: 25 },
+  ]);
   return (
     <>
       <div className="p-4 bg-zinc-300 h-screen w-full">
-        {val.map(item=><h1>{item}</h1>)}
-       <button onClick={()=>setVal(()=>{
-        return val.filter((item,index)=>index!=val.length -1)
-       })} className="px-2 py-1 text-white text-xs bg-blue-500 rounded-full">click</button>
+        {val.map((item) => (
+          <h1>
+            {item.name} <span>{item.age}</span>
+          </h1>
+        ))}
+        <button
+          onClick={() =>
+            setVal(() =>
+              val.map((item) =>
+                item.name === "hasfkkfs"
+                  ? { name: "hasfkkfs", age: 2555 }
+                  : item
+              )
+            )
+          }
+        >
+          change age
+        </button>
       </div>
     </>
   );
@@ -19,10 +37,7 @@ export default App;
 //se elem ate hai toh usko sb same lgte toh ise resolve krne ka trika ye hai k hum child ko aik key de de yani map k andr jo function hota
 //use do param pass krayenge aik toh value hogi or dosra index kiu k index hr bar change hota hai or key k andr bhi index de dein gai
 
-
 //Fragment
 //fragment basically ye hai k ap bina extra div bnye ap cheezon ko wrap kr skte ho kuch yoo <></>
 
-
-//useState stete ko turant complete nhi krta woh usko complete krta hai apne hisab se function completion ke baad to fix perfomence issuse 
-
+//useState stete ko turant complete nhi krta woh usko complete krta hai apne hisab se function completion ke baad to fix perfomence issuse

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Card from "./Components/Card";
 function App() {
-  const [val,setVal] =useState({name:"emad",isBanned:false});
+  const [val,setVal] =useState({name:"emad",age:12});
   return (
     <>
       <div className="p-4 bg-zinc-300 h-screen w-full">
-        <h1>name: {val.name}</h1>
-        <h1>banned: {val.isBanned.toString()}</h1>
-        <button onClick={()=>setVal({...val,isBanned:(!val.isBanned)})} className={`${val.isBanned?"bg-green-500":"bg-red-500"} px-2 py-1 text-zinc-100 rounded-full`}>Change Banned</button>
+        <button onClick={()=>{
+          setVal({...val,gender:"male"})
+        }}>Click</button>
       </div>
     </>
   );
@@ -21,4 +21,7 @@ export default App;
 
 //Fragment
 //fragment basically ye hai k ap bina extra div bnye ap cheezon ko wrap kr skte ho kuch yoo <></>
+
+
+//useState stete ko turant complete nhi krta woh usko complete krta hai apne hisab se function completion ke baad to fix perfomence issuse 
 

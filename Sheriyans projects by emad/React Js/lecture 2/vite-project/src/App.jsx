@@ -1,32 +1,12 @@
 import React, { useState } from "react";
 import Card from "./Components/Card";
 function App() {
-  const [val, setVal] = useState([
-    { name: "hasfs", age: 21 },
-    { name: "hasfkkfs", age: 27 },
-    { name: "asfs", age: 25 },
-  ]);
+  const [val,setVal] =useState(true)
   return (
     <>
       <div className="p-4 bg-zinc-300 h-screen w-full">
-        {val.map((item) => (
-          <h1>
-            {item.name} <span>{item.age}</span>
-          </h1>
-        ))}
-        <button
-          onClick={() =>
-            setVal(() =>
-              val.map((item) =>
-                item.name === "hasfkkfs"
-                  ? { name: "hasfkkfs", age: 2555 }
-                  : item
-              )
-            )
-          }
-        >
-          change age
-        </button>
+        <h1>{val?"dont go":"go out"}</h1>
+        <button onClick={()=>setVal(()=>!val)} className={`py-1 px-2 text-white ${val?"bg-blue-500":"bg-red-500"} rounded-full font-semibold`}>change</button>
       </div>
     </>
   );

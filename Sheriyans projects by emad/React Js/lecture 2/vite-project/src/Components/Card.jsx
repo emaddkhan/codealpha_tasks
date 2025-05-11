@@ -1,7 +1,7 @@
 import React from 'react'
 
-function Card({values,cardBtnHandler}) {
-  const {img,name,profession} =values;
+function Card({values,clickHandler,index}) {
+  const {img,name,profession,friend} =values;
   return (
     <div className='w-60 bg-zinc-50 overflow-hidden rounded-md m-1'>
       <div className='img h-44 bg-sky-200'>
@@ -10,7 +10,7 @@ function Card({values,cardBtnHandler}) {
       <div className='py-3 px-2'>
         <h3 className='text-xl font-semibold'>{name}</h3>
         <h5 className='text-xs'>{profession}</h5>
-        <button onClick={cardBtnHandler} className='mt-4 px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-md'>Add friend</button>
+        <button onClick={()=>clickHandler(index)} className='mt-4 px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-md'>{friend?"Remove Friend":"Add Friend"}</button>
       </div>
     </div>
   )

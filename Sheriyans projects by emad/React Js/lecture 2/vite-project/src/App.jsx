@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import Card from './Components/Card'
 
 function App() {
-  const data=[
+  const raw=[
     {name:"John",profession:"painter",img:"https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D",friend:false},
     {name:"Michael",profession:"Singer",img:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D",friend:false},
     {name:"ferovail",profession:"actor",img:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D",friend:false},
   ]
-  const [realData,setRealData] =useState(data)
-  const cardBtnHandler =(cardIndex)=>{
-    return setRealData((previous)=>{
-      return previous.map((item,index)=>{
-        if(index === cardIndex){
+  const [data,setData] =useState(raw);
+  const cardBtnHandler=(changingIndex)=>{
+    setData((prev)=>{
+      return prev.map((item,index)=>{
+        if(index===changingIndex){
           return {...item,friend:!item.friend}
         }
         return item;
@@ -22,8 +22,8 @@ function App() {
     <>
      <div className='h-screen w-full flex items-center bg-zinc-300 gap-2 justify-center'>
       {
-        realData.map((item,index)=>(
-          <Card clickHandler={cardBtnHandler} values={item} index={index} key={index}/>
+        data.map((item,index)=>(
+          <Card btnHandler={cardBtnHandler} values={item} index={index} key={index}/>
         ))
       }
      </div>

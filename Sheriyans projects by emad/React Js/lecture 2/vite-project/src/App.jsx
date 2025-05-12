@@ -1,38 +1,59 @@
 import React, { useState } from 'react'
+import Navbar from './Components/Navbar'
 import Card from './Components/Card'
 
 function App() {
-  const raw=[
-    {name:"John",profession:"painter",img:"https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D",friend:false},
-    {name:"Michael",profession:"Singer",img:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D",friend:false},
-    {name:"ferovail",profession:"actor",img:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D",friend:false},
+  const raw =[
+    {img:"https://images.unsplash.com/photo-1746950862509-959ed92c42b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8",song:"Challenger",artist:"Emakers",added:false,},
+    {img:"https://plus.unsplash.com/premium_photo-1746194532343-a88b76a9f76e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D",song:"King of life",artist:"Emakers",added:false,},
+    {img:"https://images.unsplash.com/photo-1728044849221-851cf8587fac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMXx8fGVufDB8fHx8fA%3D%3D",song:"Only Death",artist:"Emakers",added:false,},
+    {img:"https://images.unsplash.com/photo-1746802401350-b99c6e692a05?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0NHx8fGVufDB8fHx8fA%3D%3D",song:"Nikolus",artist:"Emakers",added:false,},
   ]
-  const [data,setData] =useState(raw);
-  const cardBtnHandler=(changingIndex)=>{
-    setData((prev)=>{
+  const color = [
+    {cname:"blue",colorCode:"bg-blue-500",show:false},
+    {cname:"red",colorCode:"bg-red-500",show:false},
+    {cname:"orange",colorCode:"bg-orange-500",show:false},
+    {cname:"green",colorCode:"bg-green-500",show:false},
+  ]
+  const [data,setData] =useState(raw)
+  
+  const favBtnHandler =(cardIndex)=>{
+    return setData((prev)=>{
       return prev.map((item,index)=>{
-        if(index===changingIndex){
-          return {...item,friend:!item.friend}
+        if(index===cardIndex){
+          return {...item,added:!item.added}
         }
         return item;
       })
     })
   }
-  return (
-    <>
-     <div className='h-screen w-full flex items-center bg-zinc-300 gap-2 justify-center'>
-      {
-        data.map((item,index)=>(
-          <Card btnHandler={cardBtnHandler} values={item} index={index} key={index}/>
-        ))
+  const [clr,setClr]=useState(color)
+  const [activeColor,setActiveColor]=useState("")
+  const showColor=(clrIndex)=>{
+   return setClr((prev)=>{
+    return prev.map((item,index)=>{
+      if(index===clrIndex){
+        setActiveColor(item.colorCode)
+        return {...item,show:!item.show}
       }
-     </div>
-    </>
+      return item;
+    })
+   })
+  }
+
+  return (
+    <div>
+      <Navbar clr={clr} data={data} activeColor={activeColor} clrHandler={showColor}/>
+      <div className='px-20 mt-10 flex gap-4 flex-wrap'>
+        {data.map((item,index)=>{
+          return <Card values={item} activeColor={activeColor} data={raw} index={index} key={index} favHandler={favBtnHandler}/> 
+        })}
+      </div>
+    </div>
   )
 }
 
 export default App
-
 //aik warning ati hai k each child should have its unique number toh ye islia hota hai k react apna aik virtual dom bnata hai to jb bhi map
 //se elem ate hai toh usko sb same lgte toh ise resolve krne ka trika ye hai k hum child ko aik key de de yani map k andr jo function hota
 //use do param pass krayenge aik toh value hogi or dosra index kiu k index hr bar change hota hai or key k andr bhi index de dein gai

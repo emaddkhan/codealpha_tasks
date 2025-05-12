@@ -1,16 +1,18 @@
 import React from 'react'
 
-function Card({values,btnHandler,index}) {
-  const {img,name,profession,friend} =values;
+function Card({values,favHandler,index,activeColor}) {
+  const {img,song,artist,added} =values
   return (
-    <div className='w-60 bg-zinc-50 overflow-hidden rounded-md m-1'>
-      <div className='img h-44 bg-sky-200'>
-        <img className='h-full w-full object-cover object-[center_center]' src={img} alt="" />
+    <div className='w-72 p-2 bg-zinc-200 py-3 rounded-md flex gap-5 relative pb-8 mt-10'>
+      <div className='h-28 rounded-md bg-orange-500 overflow-hidden w-28'>
+        <img className='h-full w-full object-cover' src={img} alt="" />
       </div>
-      <div className='py-3 px-2'>
-        <h3 className='text-xl font-semibold'>{name}</h3>
-        <h5 className='text-xs'>{profession}</h5>
-        <button onClick={()=>btnHandler(index)} className={`mt-4 px-3 py-1 ${!friend?"bg-blue-500":"bg-green-500"} text-white text-xs font-semibold rounded-md`}>{friend?"Friends":"Add Friend"}</button>
+      <div>
+        <h1 className='font-semibold text-xl leading-none'>{song}</h1>
+        <h3>{artist}</h3>
+      </div>
+      <div onClick={()=>favHandler(index)} className={`cursor-pointer absolute px-3 py-2 rounded-full ${added?"bg-teal-500":activeColor||"bg-blue-500"} text-white bottom-0 left-1/2 -translate-x-[50%] translate-y-[50%]`}>
+        <h3>{added?"Added":"Add to favorite"}</h3>
       </div>
     </div>
   )

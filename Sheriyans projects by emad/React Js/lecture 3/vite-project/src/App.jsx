@@ -1,18 +1,17 @@
 import React, { useRef, useState } from 'react'
+import { useForm } from 'react-hook-form'
+
 
 function App() {
-  const [val,setVal]=useState({name:""});
-  const handleSubmit=(e)=>{
-    e.preventDefault();
-    console.log(val)
-  }
+ const {register,handleSubmit}=useForm()
   return (
     <div className='p-4'>
-      <form action="" onSubmit={handleSubmit}>
-        <input type="text" onChange={(e)=>setVal({...val,name:e.target.value})} placeholder='name' />
-        <input type="text" onChange={(e)=>setVal({...val,age:e.target.value})} placeholder='age' />
+      <form action="" onSubmit={handleSubmit(data=>console.log(data))}>
+        <input {...register("name")} type="text" placeholder='name'/>
+        <input {...register("email")} type="text" placeholder='email' />
         <input type="submit" />
       </form>
+      
     </div>
   )
 }
@@ -30,3 +29,6 @@ export default App
 //--Controlled Components
 //ap jb bhi kuch likhein useState k zaria ap data real time pr update krdein
 //jaise hi kuch type ho setStaet krdo new value k barabar
+
+//--Reack hook form aik package hai or usse installed krna parhta hai
+// npm install react-hook-form

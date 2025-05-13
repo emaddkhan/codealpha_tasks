@@ -1,17 +1,26 @@
-import React, { useRef, useState } from 'react'
-import { useForm } from 'react-hook-form'
-
+import React, { useState } from 'react'
+import Cards from './Components/Cards'
+import Form from './Components/Form'
 
 function App() {
- const {register,handleSubmit}=useForm()
+  const [users,setUsers]= useState([]);
+  const formSubmitHandler=(data)=>{
+    setUsers([...users,data])
+    console.log(users)
+  }
+      const removeHandler=(id)=>{
+        setUsers(()=>{
+          return users.filter((item,index)=>{
+            return index!=id
+          })
+        })
+    }
   return (
-    <div className='p-4'>
-      <form action="" onSubmit={handleSubmit(data=>console.log(data))}>
-        <input {...register("name")} type="text" placeholder='name'/>
-        <input {...register("email")} type="text" placeholder='email' />
-        <input type="submit" />
-      </form>
-      
+    <div className='w-full h-screen flex justify-center items-center bg-zinc-200'>
+      <div className='container mx-auto'>
+        <Cards removeHandler={removeHandler} users={users}/>
+        <Form formSubmitHandler={formSubmitHandler}/>
+      </div>
     </div>
   )
 }
@@ -32,3 +41,4 @@ export default App
 
 //--Reack hook form aik package hai or usse installed krna parhta hai
 // npm install react-hook-form
+//-now i make the generation of card

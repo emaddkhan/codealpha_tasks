@@ -1,20 +1,16 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 function App() {
-  const name =useRef(null);
-  const age =useRef(null);
-  const email =useRef(null);
+  const [val,setVal]=useState({name:""});
   const handleSubmit=(e)=>{
     e.preventDefault();
-  console.log(name.current.value,age.current.value,email.current.value)
-
+    console.log(val)
   }
   return (
     <div className='p-4'>
       <form action="" onSubmit={handleSubmit}>
-        <input ref={name} type="text" placeholder='name' />
-        <input ref={age} type="text" placeholder='age' />
-        <input ref={email} type="text" placeholder='email' />
+        <input type="text" onChange={(e)=>setVal({...val,name:e.target.value})} placeholder='name' />
+        <input type="text" onChange={(e)=>setVal({...val,age:e.target.value})} placeholder='age' />
         <input type="submit" />
       </form>
     </div>
@@ -30,3 +26,7 @@ export default App
 //--react hook form
 
 // useRef--is tareeke se hum hr input ko select krdete hain hain or uski value tb nikalte hain jb form submit krte hain
+
+//--Controlled Components
+//ap jb bhi kuch likhein useState k zaria ap data real time pr update krdein
+//jaise hi kuch type ho setStaet krdo new value k barabar

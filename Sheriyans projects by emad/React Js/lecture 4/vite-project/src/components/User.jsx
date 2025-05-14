@@ -1,11 +1,15 @@
 import React from 'react'
+import { Link, useParams } from 'react-router-dom'
 
 function User() {
   return (
     <div className='w-1/2 p-3 m-auto mt-10'>
-        <h1 className='text-3xl text-red-300 mb-3'>User</h1>
-        <p className='text-zinc-500 text-xl mb-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit facere molestiae saepe vel maiores autem provident fuga quis voluptatibus animi tempora optio exercitationem, deleniti quam nisi iusto fugiat in voluptate aliquam tempore commodi hic eum, reiciendis consequatur. Esse quaerat itaque perferendis deleniti doloribus, amet cupiditate labore impedit, ullam omnis sit?</p>
-        <button className='px-3 py-2 text-white bg-zinc-500 rounded-lg'>Explore More</button>
+        <h1 className='text-3xl text-red-300 mb-3'>Users</h1>
+        <div className='flex flex-col mt-4'>
+          <Link className='hover:bg-red-300 p-3 bg-red-200 w-1/2 my-1' to="/user/john">John</Link>
+          <Link className='hover:bg-red-300 p-3 bg-red-200 w-1/2 my-1' to="/user/emad">Emad</Link>
+          <Link className='hover:bg-red-300 p-3 bg-red-200 w-1/2 my-1' to="/user/aamir">Aamir</Link>
+        </div>
     </div>
   )
 }

@@ -1,12 +1,19 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+    const navigate = useNavigate();
+        const backHandler=()=>{
+        navigate(-1)
+      }
   return (
-    <div className='w-1/2 p-3 m-auto mt-10'>
-        <h1 className='text-3xl text-red-300 mb-3'>Home</h1>
-        <p className='text-zinc-500 text-xl mb-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit facere molestiae saepe vel maiores autem provident fuga quis voluptatibus animi tempora optio exercitationem, deleniti quam nisi iusto fugiat in voluptate aliquam tempore commodi hic eum, reiciendis consequatur. Esse quaerat itaque perferendis deleniti doloribus, amet cupiditate labore impedit, ullam omnis sit?</p>
-        <button className='px-3 py-2 text-white bg-zinc-500 rounded-lg'>Explore More</button>
-    </div>
+    <>
+     <div className='w-1/2 mx-auto mt-10'>
+        <h1 className='font-bold text-red-300 text-3xl'>Home</h1>
+        <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptates culpa doloremque officiis possimus reiciendis fuga, iusto, molestiae labore saepe laudantium repudiandae, quisquam ratione magni voluptas omnis necessitatibus ducimus aspernatur accusantium esse ipsa? Numquam eum, dolorum tempora accusantium, enim suscipit, vero ad ipsum dolor temporibus veniam laborum fugiat repellat sed harum labore fugit possimus? Qui totam, deleniti velit sit veniam illo? Quia quis eos perferendis totam magnam ab voluptatibus sed.</p>
+        <button onClick={backHandler} className='bg-red-300 text-white px-3 py-2 rounded-md'>Go back</button>
+     </div>
+    </>
   )
 }
 

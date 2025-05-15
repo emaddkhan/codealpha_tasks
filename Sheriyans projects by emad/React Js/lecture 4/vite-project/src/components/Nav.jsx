@@ -1,43 +1,34 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Nav() {
   return (
-    <nav className="flex justify-center gap-10 py-4">
+    <div className="flex gap-10 justify-center p-5">
       <NavLink
-        className={(e) => {
-          return [
-            e.isActive ? "text-red-200" : "",
-            e.isActive ? "font-bold" : "",
-          ].join(" ");
-        }}
         to="/"
+        className={({ isActive }) =>
+          `font-semibold text-xl ${isActive ? "text-red-300" : ""}`
+        }
       >
         Home
       </NavLink>
       <NavLink
-        className={(e) => {
-          return [
-            e.isActive ? "text-red-200" : "",
-            e.isActive ? "font-bold" : "",
-          ].join(" ");
-        }}
-        to="/user"
-      >
-        User
-      </NavLink>
-      <NavLink
-        className={(e) => {
-          return [
-            e.isActive ? "text-red-200" : "",
-            e.isActive ? "font-bold" : "",
-          ].join(" ");
-        }}
         to="/about"
+        className={({ isActive }) =>
+          `font-semibold text-xl ${isActive ? "text-red-300" : ""}`
+        }
       >
         About
       </NavLink>
-    </nav>
+      <NavLink
+        to="/user"
+        className={({ isActive }) =>
+          `font-semibold text-xl ${isActive ? "text-red-300" : ""}`
+        }
+      >
+        Users
+      </NavLink>
+    </div>
   );
 }
 

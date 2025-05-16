@@ -1,7 +1,8 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Show() {
+    
   const [products, setProducts] = useState([]);
 
   const api = "https://fakestoreapi.com/products";
@@ -10,14 +11,16 @@ function Show() {
       .get(api)
 
       .then((data) => {
-        console.log(data.data);
         setProducts(data.data);
       });
   };
+  useEffect(()=>{
+        getProducts()
+    })
   return (
     <>
       <button
-        onClick={getProducts}
+        
         className="px-4 py-1 rounded-md bg-red-300 text-white"
       >
         Get Products

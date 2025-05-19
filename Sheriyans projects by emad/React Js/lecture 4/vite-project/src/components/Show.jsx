@@ -16,7 +16,7 @@ function Show() {
   };
   useEffect(()=>{
         getProducts()
-    })
+    },[])
   return (
     <>
       <button

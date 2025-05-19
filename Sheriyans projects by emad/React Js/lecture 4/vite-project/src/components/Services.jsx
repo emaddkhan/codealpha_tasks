@@ -1,15 +1,28 @@
-import React, { useEffect } from 'react'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 function Services() {
-    useEffect(()=>{
-        console.log("service is created")
-        return()=>{
-            console.log("service is deleted")
-        }
-    })
+  const [user, setUser] = useState([]);
+  const getUser = () => {
+    const userApi = "https://fakestoreapi.in/api/users";
+    axios.get(userApi).then((products) => {
+      setUser(products.data.users);
+    });
+  };
+  useEffect(() => {
+    getUser();
+  }, []);
   return (
-    <div>Services</div>
-  )
+    <>
+      <div className="mt-10">
+        {user.length>0?(<ul>
+        {user.map((items, index) => {
+          return (<li className="p-5 rounded-lg bg-red-300 w-1/2 mt-2" key={index}>{items.username}</li>);
+        })}
+      </ul>):<h1>loading...</h1>}
+      </div>
+    </>
+  );
 }
 
-export default Services
+export default Services;

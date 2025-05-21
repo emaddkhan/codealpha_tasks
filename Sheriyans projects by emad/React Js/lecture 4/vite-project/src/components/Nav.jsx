@@ -7,6 +7,7 @@ function Nav() {
         <Link className='font-semibold' to="/">Home</Link>
         <Link className='font-semibold' to="/user">User</Link>
         <Link  className='font-semibold' to="/userdetail">User Details</Link>
+        <Link  className='font-semibold' to="/about">About</Link>
     </div>
   )
 }

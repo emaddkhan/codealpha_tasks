@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom'
 
 function Nav() {
   return (
-    <div className='flex justify-center p-5 gap-10'>
-        <Link className='font-semibold' to="/">Home</Link>
-        <Link className='font-semibold' to="/user">User</Link>
-        <Link  className='font-semibold' to="/about">About</Link>
+    <div className='flex gap-10 justify-center p-5 border-b-2'>
+        <Link to="/">Home</Link>
+        <Link to="/user">User</Link>
     </div>
   )
 }

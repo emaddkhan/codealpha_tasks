@@ -1,20 +1,30 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import { UserContext } from '../context/Context'
-import UserDetail from './UserDetail';
+import React, { useContext } from "react";
+import { userContext } from "../utils/Context";
+import { useNavigate, useParams } from "react-router-dom";
 
 function User() {
-  const {user,setUser} = useContext(UserContext);
+    const navigate=useNavigate()
+  const { id } = useParams();
+  const { user, setUser } = useContext(userContext);
+  const userSingle = user.find((u) => u.id === Number(id));
+  const backHandler=()=>{
+    navigate(-1)
+  }
   return (
-    <div className='w-1/2 mx-auto mt-10'>
-      <div className='w-full flex flex-col'>
-        {user.map((items,index)=>(
-          <Link to={`/user/${items.id}`} key={index} className="p-5 pr-[45%] rounded-lg mt-2 bg-red-200">{items.name}</Link>
-        ))}
-      </div>
-      
+    <div className="w-1/2 mx-auto mt-10">
+      {userSingle ? (
+        <>
+          <h1>{userSingle.name[0]}</h1>
+          <h1>{userSingle.username}</h1>
+          <h1>{userSingle.email}</h1>
+          <h1>{userSingle.phone}</h1>
+          <button className="px-3 py-2 bg-red-300 rounded-md" onClick={backHandler}>Go Back</button>
+        </>
+      ) : (
+        <h1>LOADING...</h1>
+      )}
     </div>
-  )
+  );
 }
 
-export default User
+export default User;

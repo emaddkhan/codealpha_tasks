@@ -4,7 +4,7 @@ import React, { createContext, useEffect, useState } from 'react'
 
 export const productData = createContext();
 function Context(props) {
-    const [product,setProducts]=useState([]);
+    const [product,setProducts]=useState(null);
     const getProducts=async()=>{
         try{
             const {data}=await axios("/products");

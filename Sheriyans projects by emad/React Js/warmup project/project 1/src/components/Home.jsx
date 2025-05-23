@@ -14,16 +14,16 @@ function Home() {
   <Link
     key={items.id}
     to={`/details/${items.id}`}
-    className="w-[18%] h-[30vh] border rounded-md shadow p-3"
+    className="w-[18%] h-[35vh] border rounded-md shadow p-3"
   >
-    <div className="w-full h-[80%] rounded-md overflow-hidden">
+    <div className="w-full h-[65%] rounded-md overflow-hidden">
       <img
         src={items.image}
-        alt={items.title}
+       
         className="w-full h-full object-cover transition-transform hover:scale-105"
       />
     </div>
-    <h3 className="text-center mt-2 hover:text-blue-300 cursor-pointer">{items.title}</h3>
+    <p className="text-center leading-none mt-5 hover:text-blue-300 cursor-pointer">{items.title}</p>
   </Link>
 ))}
 

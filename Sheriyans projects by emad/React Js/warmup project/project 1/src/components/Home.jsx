@@ -14,7 +14,7 @@ function Home() {
   <Link
     key={items.id}
     to={`/details/${items.id}`}
-    className="w-[18%] h-[35vh] border rounded-md shadow p-3"
+    className="w-[18%] h-[35vh] border rounded-md shadow p-2"
   >
     <div className="w-full h-[65%] rounded-md overflow-hidden">
       <img

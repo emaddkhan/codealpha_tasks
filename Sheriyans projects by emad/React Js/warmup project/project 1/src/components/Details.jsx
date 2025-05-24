@@ -24,7 +24,7 @@ function Details() {
             <div className='imageDiv w-[45%]  h-full'>
                 <img className='w-full h-full object-cover' src={singleProducts.image} alt="" />
             </div>
-            <div className='content w-[50%] flex flex-col justify-center'>
+            <div className='content w-[50%] h-full flex flex-col justify-center'>
                 <h1 className='text-3xl font-semibold'>{singleProducts.title}</h1>
                 <h3 className='my-2 opacity-[.6] hover:opacity-[.8] '>{singleProducts.category}</h3>
                 <h3 className='font-semibold text-red-300 text-xl my-3'>$ {singleProducts.price}</h3>

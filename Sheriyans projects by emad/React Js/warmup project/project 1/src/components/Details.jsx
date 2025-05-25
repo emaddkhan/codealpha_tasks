@@ -1,9 +1,11 @@
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from '../utils/axios'
 import React, { useEffect, useState } from 'react'
-import Loading from './Loading'
+import Loading from './Loading';
+import { IoIosArrowBack } from "react-icons/io";
 
 function Details() {
+    const nanigate = useNavigate()
     const [singleProducts,setSingleProducts]= useState(null)
     const {id}= useParams()
     const getSingleProducts=async ()=>{
@@ -18,9 +20,15 @@ function Details() {
     useEffect(()=>{
         getSingleProducts()
     },[])
+    const backHandler=()=>{
+        nanigate(-1)
+    }
   return singleProducts? (
     <div className='w-full h-screen flex justify-center'>
-        <div className='w-[80%] justify-between p-[10%] flex'>
+        <div className='w-[80%] justify-between p-[7%] flex'>
+           <IoIosArrowBack onClick={backHandler} className="h-10 w-10 absolute cursor-pointer" />
+
+
             <div className='imageDiv w-[45%]  h-full'>
                 <img className='w-full h-full object-cover' src={singleProducts.image} alt="" />
             </div>

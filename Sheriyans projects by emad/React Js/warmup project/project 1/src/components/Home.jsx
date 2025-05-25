@@ -31,7 +31,7 @@ function Home() {
   return product ? (
     <>
       <Navbar />
-      <div className="w-[85%] h-screen p-5 flex mt-[3%] flex-wrap gap-2 overflow-x-hidden overflow-y-auto">
+      <div className="w-[85%] h-screen p-5 flex pt-[4%] flex-wrap gap-2 overflow-x-hidden overflow-y-auto">
         {loading ? (
         <Loading />
       ) : (

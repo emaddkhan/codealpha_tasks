@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { productData } from "../utils/Context";
 
 function CreatePage() {
   const [title, setTitle] = useState("");
@@ -7,11 +8,30 @@ function CreatePage() {
   const [price, setPrice] = useState("");
   const [url, setUrl] = useState("");
   const [description, setDescription] = useState("");
+
+    const [product, setProducts] = useContext(productData);
+  const addProductHandler = (e) => {
+    e.preventDefault();
+    const products = {
+      title,
+      price,
+      category,
+      url,
+      description,
+    };
+    console.log(product);
+    setProducts([...product,products])
+  };
+
   return (
     <div className="w-[70%] mx-auto h-screen py-20">
       <div className="container w-full h-full  p-5 flex flex-col justify-center">
         <h1 className="text-3xl ml-[10%] font-semibold">Add New Product</h1>
-        <form action="" className="flex flex-col items-center ">
+        <form
+          action=""
+          onClick={addProductHandler}
+          className="flex flex-col items-center "
+        >
           <input
             type="text"
             value={title}
@@ -45,18 +65,18 @@ function CreatePage() {
           <textarea
             className="w-[80%] mt-2 p-2 bg-zinc-200  text-xl"
             value={description}
-            onChange={(e) => setCategory(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
             placeholder="Enter product description here..."
             rows={8}
             name=""
             id=""
           ></textarea>
+          <div className="w-[80%] py-2 flex justify-end">
+            <button className="px-5 bg-blue-400 text-white rounded-md font-semibold py-3 border">
+              Add New Category
+            </button>
+          </div>
         </form>
-        <div className="w-[90%] py-2 flex justify-end">
-          <button className="px-5 bg-blue-400 text-white rounded-md font-semibold py-3 border">
-            Add New Category
-          </button>
-        </div>
       </div>
     </div>
   );

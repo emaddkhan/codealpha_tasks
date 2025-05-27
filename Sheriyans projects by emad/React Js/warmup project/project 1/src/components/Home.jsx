@@ -10,7 +10,6 @@ function Home() {
   const [loading,setLoading]=useState(false);
   const { search } = useLocation();
   const category = search.split("=")[1];
-  console.log(category);
   const[filteredProducts,setFilteredProducts]= useState(null)
   const getCategoryProducts =async () => {
     try {
@@ -27,7 +26,7 @@ function Home() {
     if(!filteredProducts||category!="undefined") setFilteredProducts(product)
     if(category != undefined) getCategoryProducts();
   },[category,product])
-  console.log(filteredProducts)
+  
   return product ? (
     <>
       <Navbar />

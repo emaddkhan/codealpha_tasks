@@ -1,8 +1,10 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { productData } from "../utils/Context";
+import { nanoid } from "nanoid";
 
 function CreatePage() {
+  const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
@@ -12,7 +14,12 @@ function CreatePage() {
     const [product, setProducts] = useContext(productData);
   const addProductHandler = (e) => {
     e.preventDefault();
+    if(title.trim().length<5|| category.trim().length<5||price.trim().length<1||url.trim().length<5||description.trim().length<5){
+      alert("Each and every must contain more then 5 letters!");
+      return;
+    }
     const products = {
+      id:nanoid(),
       title,
       price,
       category,
@@ -21,6 +28,7 @@ function CreatePage() {
     };
     console.log(product);
     setProducts([...product,products])
+    navigate('/')
   };
 
   return (
@@ -29,7 +37,7 @@ function CreatePage() {
         <h1 className="text-3xl ml-[10%] font-semibold">Add New Product</h1>
         <form
           action=""
-          onClick={addProductHandler}
+          onSubmit={addProductHandler}
           className="flex flex-col items-center "
         >
           <input
@@ -72,7 +80,7 @@ function CreatePage() {
             id=""
           ></textarea>
           <div className="w-[80%] py-2 flex justify-end">
-            <button className="px-5 bg-blue-400 text-white rounded-md font-semibold py-3 border">
+            <button type="submit" className="px-5 bg-blue-400 text-white rounded-md font-semibold py-3 border">
               Add New Category
             </button>
           </div>

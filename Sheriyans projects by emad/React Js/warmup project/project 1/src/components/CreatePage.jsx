@@ -23,7 +23,7 @@ function CreatePage() {
       title,
       price,
       category,
-      url,
+      image:url,
       description,
     };
     console.log(product);

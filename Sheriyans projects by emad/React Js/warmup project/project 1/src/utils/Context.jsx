@@ -4,21 +4,21 @@ import React, { createContext, useEffect, useState } from 'react'
 
 export const productData = createContext();
 function Context(props) {
-    const [product,setProducts]=useState(null);
-    const getProducts=async()=>{
-        try{
-            const {data}=await axios("/products");
-            // console.log(data.products)
-            setProducts(data.products)
-        }
-        catch{
-            console.log(Error);
+    const [product,setProducts]=useState(JSON.parse(localStorage.getItem("products"))||null);
+    // const getProducts=async()=>{
+    //     try{
+    //         const {data}=await axios("/products");
+    //         // console.log(data.products)
+    //         setProducts(data.products)
+    //     }
+    //     catch{
+    //         console.log(Error);
             
-        }
-    }
-    useEffect(()=>{
-        getProducts()
-    },[])
+    //     }
+    // }
+    // useEffect(()=>{
+    //     getProducts()
+    // },[])
   return (
     <productData.Provider value={[product,setProducts]}>{props.children}</productData.Provider>
   )

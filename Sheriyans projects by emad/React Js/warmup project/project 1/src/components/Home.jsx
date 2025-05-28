@@ -23,8 +23,13 @@ function Home() {
     }
   };
   useEffect(()=>{
-    if(!filteredProducts||category!="undefined") setFilteredProducts(product)
-    if(category != undefined) getCategoryProducts();
+    if(!filteredProducts||category!="undefined") {
+      setFilteredProducts(product)
+    }
+    if(category != undefined) {
+      // getCategoryProducts()
+      setFilteredProducts(product.filter(p=>p.category==category))
+    };
   },[category,product])
   
   return product ? (

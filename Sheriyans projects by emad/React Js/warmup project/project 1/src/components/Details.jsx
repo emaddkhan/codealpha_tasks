@@ -9,7 +9,7 @@ function Details() {
     const navigate = useNavigate()
     const [singleProducts, setSingleProducts] = useState(null)
     const { id } = useParams()
-    const [product] = useContext(productData)
+    const [product,setProduct] = useContext(productData)
 
     useEffect(() => {
         if (product && id) {
@@ -20,6 +20,12 @@ function Details() {
     }, [product, id])
 
     const backHandler = () => navigate(-1)
+    const deletHandler=()=>{
+        const newFilteredProducts=product.filter(e=>e.id!==id);
+        setProduct(newFilteredProducts);
+        localStorage.setItem("products",JSON.stringify(newFilteredProducts))
+        navigate(-1)
+    }
 
     return singleProducts ? (
         <div className='w-full h-screen flex justify-center'>
@@ -35,7 +41,7 @@ function Details() {
                     <p className='mb-5 text-[21px] font-medium leading-7'>{singleProducts.description}</p>
                     <div>
                         <button className="px-8 py-3 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white rounded transition-all duration-200">Edit</button>
-                        <button className="px-8 ml-5 py-3 border border-red-500 text-red-500 hover:bg-red-500 hover:text-white rounded transition-all duration-200">Delete</button>
+                        <button onClick={(()=>deletHandler(product.id))} className="px-8 ml-5 py-3 border border-red-500 text-red-500 hover:bg-red-500 hover:text-white rounded transition-all duration-200">Delete</button>
                     </div>
                 </div>
             </div>

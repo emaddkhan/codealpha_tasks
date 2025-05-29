@@ -4,11 +4,7 @@ import { productData } from "../utils/Context";
 import { nanoid } from "nanoid";
 function EditePage() {
   const navigate = useNavigate();
-  const [title, setTitle] = useState("");
-  const [category, setCategory] = useState("");
-  const [price, setPrice] = useState("");
-  const [url, setUrl] = useState("");
-  const [description, setDescription] = useState("");
+  
 
   const [product, setProducts] = useContext(productData);
   const [editProduct, setEditProduct] = useState({
@@ -46,8 +42,13 @@ function EditePage() {
   };
 
   const changeHandler = (e) => {
-    console.log(e.name, e.target.value);
-  };
+  const { name, value } = e.target;
+  setEditProduct((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+};
+
   const backHandler = () => {
     navigate(-1);
   };

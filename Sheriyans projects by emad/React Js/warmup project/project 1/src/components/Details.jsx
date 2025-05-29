@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import axios from '../utils/axios'
 import React, { useContext, useEffect, useState } from 'react'
 import Loading from './Loading'
@@ -40,7 +40,7 @@ function Details() {
                     <h3 className='font-semibold text-red-300 text-xl my-3'>$ {singleProducts.price}</h3>
                     <p className='mb-5 text-[21px] font-medium leading-7'>{singleProducts.description}</p>
                     <div>
-                        <button className="px-8 py-3 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white rounded transition-all duration-200">Edit</button>
+                        <Link to={`/edit/${singleProducts.id}`} className="px-8 py-3 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white rounded transition-all duration-200">Edit</Link>
                         <button onClick={(()=>deletHandler(product.id))} className="px-8 ml-5 py-3 border border-red-500 text-red-500 hover:bg-red-500 hover:text-white rounded transition-all duration-200">Delete</button>
                     </div>
                 </div>

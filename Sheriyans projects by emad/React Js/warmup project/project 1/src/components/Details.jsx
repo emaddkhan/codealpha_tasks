@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import Loading from './Loading'
 import { IoIosArrowBack } from "react-icons/io"
 import { productData } from '../utils/Context'
+import { toast } from 'react-toastify'
 
 function Details() {
     const navigate = useNavigate()
@@ -25,6 +26,8 @@ function Details() {
         setProduct(newFilteredProducts);
         localStorage.setItem("products",JSON.stringify(newFilteredProducts))
         navigate(-1)
+            toast.success("Product deleted successfully")
+        
     }
 
     return singleProducts ? (

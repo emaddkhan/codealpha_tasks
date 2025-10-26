@@ -1,0 +1,7 @@
+Variables: name of a memory location which stores some data
+
+Variables Rules:
+Varibles are case sensetive mean (a and A are totally different )
+1st character shoul be alphabet or("_")
+no comma no blank space in Variables name
+no other symble other than "_"

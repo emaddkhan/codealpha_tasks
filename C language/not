@@ -1,0 +1,59 @@
+// Variables: name of a memory location which stores some data
+
+// Variables Rules:
+// Varibles are case sensetive mean (a and A are totally different )
+// 1st character shoul be alphabet or("_")
+// no comma no blank space in Variables name
+// no other symble other than "_"
+
+
+// Constants
+
+// values that dont change(fixed)
+
+// Integer constant:1,2,3,-4-5,0
+// real constant:1.0,2.0,3.14,-2.4
+// character constant:'a','b','A','#','&'   for character constantwe will single quotes
+
+
+// Keywords: Reserved that has special meaning to the computer 
+// there are 32 keywords in C:
+
+// Program structure:
+
+// #include<stdio.h>   (ye line hamesha code me likhni hi likhni hai)
+
+// int main (){ isme main function jo hamara code line by line run krta hai
+//     printf("hello world) is code hmm kabhi bhi change kr skte hai
+//     return 0;
+// }
+
+
+// comments : that are not part of are program
+// single line comment = //
+// multiple line comment=/* */
+
+
+// Output:
+// printf("hello world");
+
+// new line 
+// printf("kuch bhi\n")
+
+// Output cases:
+// Integers:
+// printf("age is %d",age);
+// Real numbers
+// printf("value of pi is %f",pi)
+// Character:
+// printf("star looks like this %c",star)
+
+// Input 
+// scanf("%d",&age)
+// compilation
+// A COMPUTER PROGRAM THAT c code into machine code
+
+
+
+
+

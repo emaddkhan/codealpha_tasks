@@ -1,0 +1,11 @@
+// #include <iostream>
+// iostream name ka aik folder pehle se hi mojood hai  -----isko khete hain header file 
+// or yeh hamari proagram ki functinality ko brhane me madad kregi
+//iostream hamare ko input or output lene ko ko madad krti hain isme or bhi bohot sari cheezain hain
+
+
+// int main (){     kabhi program start hoga toh main se start hoga yeh hamar entry point hai  
+                    //or int ka matlab hai k is function ko complete krne k baad integer valeu return krooga
+//  std::cout<<"hello world";    iostream k ander aik function hai cout name ka jo standard(std) namespace k ander save hai
+//   return 0;   it means succesfull termination program
+//}

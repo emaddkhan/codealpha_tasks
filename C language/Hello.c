@@ -1,4 +1,5 @@
 # include<stdio.h>
+#include <math.h>
 
 int main(){
     // int age = 18;
@@ -44,12 +45,23 @@ int main(){
     //QUESTION 02;
     //Calculate the area of a circle
     //Answere : as we know area of  circle is pi(r)square
-    float pi = 3.142;
-    float radius;
-    printf("Enter radius of a circle");
-    scanf("%f",&radius);
-    float area = pi * radius * radius;
-    printf("Area of a circle is %f ",area);
+    // float pi = 3.142;
+    // float radius;
+    // printf("Enter radius of a circle");
+    // scanf("%f",&radius);
+    // float area = pi * radius * radius;
+    // printf("Area of a circle is %f ",area);
+
+    // int a=2,b =2;
+    // int sum =a+b;
+    // printf("%d\n",sum);
+
+    // int power =pow(a,b);
+    // printf("%d\n",power);
+
+    int a =(int) 1.9999999;//in brackets i write int because now int will forcefully convert float value into int
+    printf("%d\n",a);
+
 
     return 0;
 }

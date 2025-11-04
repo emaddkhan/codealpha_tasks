@@ -60,6 +60,22 @@ Type declaration instructions:  declare variable before using it     int a=4;  c
 Arithematic instructions: a+b
 moduler operator(%) only applly on int variables and gives the reminder
 
+CONTROL INSTRUCTIONS: use to determine flow of program
+1)Sequence control:which run line by line
+2)Decision Control: if-else
+3)Loop Control:for-while
+4)Case control:
+
+
+
+OPERATORS:
+ Arithematic Operators:+,-,*,/,%
+ Relational Operators:   ==,>,>=,<,<=,!=
+ Logical Operator:
+ Bitwise Operators:
+ Assignment Operators:
+ Ternary Operators:
+
 
 
 

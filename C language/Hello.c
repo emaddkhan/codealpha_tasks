@@ -59,8 +59,9 @@ int main(){
     // int power =pow(a,b);
     // printf("%d\n",power);
 
-    int a =(int) 1.9999999;//in brackets i write int because now int will forcefully convert float value into int
-    printf("%d\n",a);
+    // int a =(int) 1.9999999;//in brackets i write int because now int will forcefully convert float value into int
+    // printf("%d\n",a);
+    printf("%d\n",4!=3);
 
 
     return 0;

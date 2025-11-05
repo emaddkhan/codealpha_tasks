@@ -61,7 +61,48 @@ int main(){
 
     // int a =(int) 1.9999999;//in brackets i write int because now int will forcefully convert float value into int
     // printf("%d\n",a);
-    printf("%d\n",4!=3);
+    // printf("%d\n",4!=3);
+
+    // printf("%d\n",!(3>4)); now output will be 0
+
+    // printf("%d\n",!(3>4 && 5>4)); now output will be 1 because ! has make false true
+
+    // int a=4;
+    // int b=1;
+    // // a= a+b;
+    // // a+=b;
+    // // a*=b;
+    // // a-=b;
+
+
+
+    // printf("%d",a);
+
+
+
+    //Write a program to check if a number is divisible by 2 or not.
+    // int x;
+    // printf("Enter any number");
+    // scanf("%d",&x);
+    // printf("%d",x%2==0);
+
+
+    //Write a program to check if a number is divisible by even or odd.
+    // int x;
+    // printf("Enter any number");
+    // scanf("%d",&x);
+    // printf("%d",x%2==0);
+
+    //print (true) or (false) for following statment:
+    // A) If its sunday & its snowing ==> true
+    // int itsSunday =1;
+    // int itsSnowing=1;
+    // printf("%d",itsSnowing&&itsSunday);
+
+    // B)If it's monday or its raining ==>true
+    int itsMonday=0;
+    int itsRaining = 1;
+    printf("%d",itsMonday||itsRaining);
 
 
     return 0;

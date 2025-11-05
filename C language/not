@@ -78,6 +78,16 @@ OPERATORS:
 
 
 
+Logical Operators:
+ && (And) operator
+ || (or) operator
+ !  (Not) operator: If there is TRUE make it false and if there is FALSE make it TRUE
+
+ASSIGNMENT OPERATORS:
+ =  a=b,b=c
+ +=  this are short hand operator  example ---  a=4;b=1   so without it it would be  a=a+b  but with it will be ---  a+=b; 
+
+
 
 
 */

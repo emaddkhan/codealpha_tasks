@@ -1,17 +1,55 @@
-// #include <iostream>
-// iostream name ka aik folder pehle se hi mojood hai  -----isko khete hain header file 
-// or yeh hamari proagram ki functinality ko brhane me madad kregi
-//iostream hamare ko input or output lene ko ko madad krti hain isme or bhi bohot sari cheezain hain
+/*
+#include <iostream>
+iostream name ka aik folder pehle se hi mojood hai  -----isko khete hain header file 
+or yeh hamari proagram ki functinality ko brhane me madad kregi
+iostream hamare ko input or output lene ko ko madad krti hain isme or bhi bohot sari cheezain hain
 
 
-// int main (){     kabhi program start hoga toh main se start hoga yeh hamar entry point hai  
-                    //or int ka matlab hai k is function ko complete krne k baad integer valeu return krooga
-//  std::cout<<"hello world";    iostream k ander aik function hai cout name ka jo standard(std) namespace k ander save hai
-//   return 0;   it means succesfull termination program
-//}
+int main (){     kabhi program start hoga toh main se start hoga yeh hamar entry point hai  
+                    or int ka matlab hai k is function ko complete krne k baad integer valeu return krooga
+ std::cout<<"hello world";    iostream k ander aik function hai cout name ka jo standard(std) namespace k ander save hai
+  return 0;   it means succesfull termination program
+}
 
 
 
 
-// Outpput in c++
-// cout <<"apna college";
+Outpput in c++
+cout <<"apna college";
+
+Bytes= 8 Bits;
+1 Bites = 1 digit;
+int has 4 four bytes
+Char occupy 1 byte
+
+
+with Value of float we write small f or capital F to define that we are writing a float variable not double variable ku like
+float Pi = 3.14f;
+float also occupy 4 bytes
+
+bool also occupy 1 byte memory
+bool just store only true or false at one time
+bool isSafe = true;
+
+double occupt 8 bytes memory
+
+
+primitive datatypes are int,char,float,double,bool
+
+--Type Casting:
+converting data from one type to another
+for example
+    char grade ='A';
+    int value=grade;      //in this code we make a char and the convert into int so in ASCII value, Value of A is so the output will be 65 
+    cout<<value<<endl;
+
+    type casting is use for converting big datatypes to small dataTypes
+     int price=100.89;
+    int newPrice =(int)price;  to convert we use fat bracket and inside it we will define datatype in which we want to conver
+    cout<<newPrice<<endl;    so the value is converted to int so the points will neglected and the output will be 100
+
+
+
+*/
+
+

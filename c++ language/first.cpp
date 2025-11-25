@@ -20,5 +20,44 @@ int main()
     // cout<<"Enter your age: ";
     // cin>>age;
     // cout<<"Your age is :"<<age<<endl;
-    return 0;
+    // for(int i = 1;i<=10;i++){
+    //     cout<<"2 *"<<2<<"="<<i*2<<endl;
+    // }
+    // return 0;
+    // int x=1;
+    // while(x<=5){
+    //     cout<<x<<endl;
+    //     x++;
+    // }
+    // int n = 1;
+    // do{
+    //     cout<<n<<endl;
+    //     n++;
+    // }while (n<=1);
+    // int i;
+    // int sum=0;
+    // for(i=1;i<=50;i++){
+    //     sum +=i;
+    // }
+    //     cout<<sum<<endl;
+    // int i;
+    // for(i=10;i>=0;i--){
+    //     cout<<i<<endl;
+    // }
+
+
+    int start,end;
+    int i;
+    cout<<"enter start point";
+    cin>>start;
+    cout<<"enter end point";
+    cin>>end;
+    cout<<"odd number btw"<<start<<"and"<<end<<"are:"<<endl;
+    for(i=start;i<=end;i++){
+        if(i%2!=0){
+            cout<<i<<endl;
+        }
+    }
+    
+    
 }

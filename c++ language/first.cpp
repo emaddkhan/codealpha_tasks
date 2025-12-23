@@ -46,18 +46,83 @@ int main()
     // }
 
 
-    int start,end;
-    int i;
-    cout<<"enter start point";
-    cin>>start;
-    cout<<"enter end point";
-    cin>>end;
-    cout<<"odd number btw"<<start<<"and"<<end<<"are:"<<endl;
-    for(i=start;i<=end;i++){
-        if(i%2!=0){
-            cout<<i<<endl;
+    // int start,end;
+    // int i;
+    // cout<<"enter start point";
+    // cin>>start;
+    // cout<<"enter end point";
+    // cin>>end;
+    // cout<<"odd number btw"<<start<<"and"<<end<<"are:"<<endl;
+    // for(i=start;i<=end;i++){
+    //     if(i%2!=0){
+    //         cout<<i<<endl;
+    //     }
+    // }
+
+    //==========================PATTERNS
+
+    // int n;
+    // cout<<"enter rows";
+    // cin>>n;
+    // for(int i = 1;i<=n;i++){
+    //     char ch='A';
+    //     for(int j=1;j<=n;j++){
+    //         cout<<ch;
+    //         ch +=1;
+    //     }
+    //     cout<<endl;
+    // } 
+    //  int n;
+    // cout<<"enter rows";
+    // cin>>n;
+    // int num =1;
+    // for(int i = 1;i<=n;i++){
+
+    //     for(int j=1;j<=n;j++){
+    //         cout<<num;
+    //         num+=1;
+    //     }
+    //     cout<<endl;
+    // } 
+
+    // int n;
+    // cout<<"enter rows";
+    // cin>>n;
+    // char ch ='A';
+    // for(int i =0;i<n;i++){
+    //     for(int j=0; j<n;j++){
+    //         cout<<ch;
+    //         ch +=1;
+    //     }
+    //     cout<<endl;
+    // } 
+    // int n;
+    // cout<<"Enter n";
+    // cin>>n;
+    // char ch ='A';
+
+    // for(int i=1;i<=n;i++){
+    //     for(int j = 1;j<=i;j++){
+    //         cout<<ch<<"";
+            
+    //     }
+    //     ch++;
+    //     cout<<endl;
+    // }
+    int n;
+    cout<<"Enter n";
+    cin>>n;
+   
+
+    for(int i=0;i<n;i++){
+        for(int j = 0;j<i;j++){
+            cout<<" ";
+            
         }
+        for (int j = 0;j<n-i;j++){
+            cout<<(i+1);
+        }
+        
+        cout<<endl;
     }
-    
-    
 }

@@ -1,0 +1,13 @@
+oop
+object are entities in the real world
+classes is like a blue print of this entities
+example :  (6:30)
+hr objects k sath alag alag tarah ki properties asscoiate hotii hain or alag alag function ji ko hum method kehte hain
+example: (9:15)
+
+pehle hum classes and objects ko likhne k liye sb se pehle classes ko declare krte hain
+SYNTAX
+class name {
+    properties;
+    method;
+};

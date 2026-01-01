@@ -1,4 +1,4 @@
-oop
+ /*oop
 object are entities in the real world
 classes is like a blue print of this entities
 example :  (6:30)
@@ -11,3 +11,39 @@ class name {
     properties;
     method;
 };
+ACESS MODIFIERS
+1)Private(default) =data & method accessible inside class
+2)Public: Dta and method accessible to everyone
+3)Protected:data and method accessible inside class and  to its derived class
+
+ENCAPSULATION
+it is wrapping up of data and members function in a single unit called class    .
+
+iska matlba ye hai k apne kuch data lio or kuch member function lia or in sab ko jor k apne aik capsule bna di yani class
+ye hume data hiding me madad krta hai jese apki ki koi sensitive information hai toh ap uske lia private access modifier use krdo
+
+
+
+//Constructor:
+special method invoked automatically at time of object creation.Used for initialization
+-same name as class
+-construtor doesnt have a return type
+-only called once(automatically at object creation)
+-memory allocation hapens when constructor is called
+
+There are three types of constucter
+-Non parametrize constructer
+-Parametrize constructer
+-Copy constructer
+
+
+in a class there can be more constructer but of dufferent types
+typye different ==>construtor overloading=>is an example of polymorphism
+
+this is a special pointer in c++ thats points to the current object
+this->prop is same as*(this).prop
+
+COPY CONSTUCTOR
+special constructer(default )used to copy properties of one object to anothe
+
+*/

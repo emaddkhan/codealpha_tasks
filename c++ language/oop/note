@@ -46,4 +46,6 @@ this->prop is same as*(this).prop
 COPY CONSTUCTOR
 special constructer(default )used to copy properties of one object to anothe
 
+INheritance
+when properties and memberfunction of base class are passed on the derived class
 */

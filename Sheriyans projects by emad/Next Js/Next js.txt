@@ -1,8 +1,0 @@
-next js
---SSR(Server side rendering)
---SSG(static side generation)
---font optimization
---image optimization
---better SEO
---Inbuilt routing 
---Backened support
